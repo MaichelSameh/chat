@@ -1,0 +1,2612 @@
+{
+"AC": {
+"name": "Ascension Island",
+"code": "AC",
+"emoji": "🇦🇨",
+"iso3": "",
+"capital": "",
+"phone_code": "",
+"currency": "",
+"language": ""
+},
+"AD": {
+"name": "Andorra",
+"code": "AD",
+"emoji": "🇦🇩",
+"iso3": "AND",
+"capital": "Andorra la Vella",
+"phone_code": "376",
+"currency": "EUR",
+"language": ""
+},
+"AE": {
+"name": "United Arab Emirates",
+"code": "AE",
+"emoji": "🇦🇪",
+"iso3": "ARE",
+"capital": "Abu Dhabi",
+"phone_code": "971",
+"currency": "AED",
+"language": "avesta"
+},
+"AF": {
+"name": "Afghanistan",
+"code": "AF",
+"emoji": "🇦🇫",
+"iso3": "AFG",
+"capital": "Kabul",
+"phone_code": "93",
+"currency": "AFN",
+"language": "Afrikaans"
+},
+"AG": {
+"name": "Antigua & Barbuda",
+"code": "AG",
+"emoji": "🇦🇬",
+"iso3": "ATG",
+"capital": "St. John's",
+"phone_code": "+1-268",
+"currency": "XCD",
+"language": ""
+},
+"AI": {
+"name": "Anguilla",
+"code": "AI",
+"emoji": "🇦🇮",
+"iso3": "AIA",
+"capital": "The Valley",
+"phone_code": "+1-264",
+"currency": "XCD",
+"language": ""
+},
+"AL": {
+"name": "Albania",
+"code": "AL",
+"emoji": "🇦🇱",
+"iso3": "ALB",
+"capital": "Tirana",
+"phone_code": "355",
+"currency": "ALL",
+"language": ""
+},
+"AM": {
+"name": "Armenia",
+"code": "AM",
+"emoji": "🇦🇲",
+"iso3": "ARM",
+"capital": "Yerevan",
+"phone_code": "374",
+"currency": "AMD",
+"language": "አማርኛ"
+},
+"AO": {
+"name": "Angola",
+"code": "AO",
+"emoji": "🇦🇴",
+"iso3": "AGO",
+"capital": "Luanda",
+"phone_code": "244",
+"currency": "AOA",
+"language": ""
+},
+"AQ": {
+"name": "Antarctica",
+"code": "AQ",
+"emoji": "🇦🇶",
+"iso3": "ATA",
+"capital": "",
+"phone_code": "",
+"currency": "",
+"language": ""
+},
+"AR": {
+"name": "Argentina",
+"code": "AR",
+"emoji": "🇦🇷",
+"iso3": "ARG",
+"capital": "Buenos Aires",
+"phone_code": "54",
+"currency": "ARS",
+"language": "العربية"
+},
+"AS": {
+"name": "American Samoa",
+"code": "AS",
+"emoji": "🇦🇸",
+"iso3": "ASM",
+"capital": "Pago Pago",
+"phone_code": "+1-684",
+"currency": "USD",
+"language": "অসমীয়া"
+},
+"AT": {
+"name": "Austria",
+"code": "AT",
+"emoji": "🇦🇹",
+"iso3": "AUT",
+"capital": "Vienna",
+"phone_code": "43",
+"currency": "EUR",
+"language": ""
+},
+"AU": {
+"name": "Australia",
+"code": "AU",
+"emoji": "🇦🇺",
+"iso3": "AUS",
+"capital": "Canberra",
+"phone_code": "61",
+"currency": "AUD",
+"language": ""
+},
+"AW": {
+"name": "Aruba",
+"code": "AW",
+"emoji": "🇦🇼",
+"iso3": "ABW",
+"capital": "Oranjestad",
+"phone_code": "297",
+"currency": "AWG",
+"language": ""
+},
+"AX": {
+"name": "Åland Islands",
+"code": "AX",
+"emoji": "🇦🇽",
+"iso3": "ALA",
+"capital": "Mariehamn",
+"phone_code": "+358-18",
+"currency": "EUR",
+"language": ""
+},
+"AZ": {
+"name": "Azerbaijan",
+"code": "AZ",
+"emoji": "🇦🇿",
+"iso3": "AZE",
+"capital": "Baku",
+"phone_code": "994",
+"currency": "AZN",
+"language": "azərbaycan dili"
+},
+"BA": {
+"name": "Bosnia & Herzegovina",
+"code": "BA",
+"emoji": "🇧🇦",
+"iso3": "BIH",
+"capital": "Sarajevo",
+"phone_code": "387",
+"currency": "BAM",
+"language": "башҡорт теле"
+},
+"BB": {
+"name": "Barbados",
+"code": "BB",
+"emoji": "🇧🇧",
+"iso3": "BRB",
+"capital": "Bridgetown",
+"phone_code": "+1-246",
+"currency": "BBD",
+"language": ""
+},
+"BD": {
+"name": "Bangladesh",
+"code": "BD",
+"emoji": "🇧🇩",
+"iso3": "BGD",
+"capital": "Dhaka",
+"phone_code": "880",
+"currency": "BDT",
+"language": ""
+},
+"BE": {
+"name": "Belgium",
+"code": "BE",
+"emoji": "🇧🇪",
+"iso3": "BEL",
+"capital": "Brussels",
+"phone_code": "32",
+"currency": "EUR",
+"language": "Беларуская"
+},
+"BF": {
+"name": "Burkina Faso",
+"code": "BF",
+"emoji": "🇧🇫",
+"iso3": "BFA",
+"capital": "Ouagadougou",
+"phone_code": "226",
+"currency": "XOF",
+"language": ""
+},
+"BG": {
+"name": "Bulgaria",
+"code": "BG",
+"emoji": "🇧🇬",
+"iso3": "BGR",
+"capital": "Sofia",
+"phone_code": "359",
+"currency": "BGN",
+"language": "български език"
+},
+"BH": {
+"name": "Bahrain",
+"code": "BH",
+"emoji": "🇧🇭",
+"iso3": "BHR",
+"capital": "Manama",
+"phone_code": "973",
+"currency": "BHD",
+"language": "भोजपुरी"
+},
+"BI": {
+"name": "Burundi",
+"code": "BI",
+"emoji": "🇧🇮",
+"iso3": "BDI",
+"capital": "Bujumbura",
+"phone_code": "257",
+"currency": "BIF",
+"language": "Bislama"
+},
+"BJ": {
+"name": "Benin",
+"code": "BJ",
+"emoji": "🇧🇯",
+"iso3": "BEN",
+"capital": "Porto-Novo",
+"phone_code": "229",
+"currency": "XOF",
+"language": ""
+},
+"BL": {
+"name": "St. Barthélemy",
+"code": "BL",
+"emoji": "🇧🇱",
+"iso3": "BLM",
+"capital": "Gustavia",
+"phone_code": "590",
+"currency": "EUR",
+"language": ""
+},
+"BM": {
+"name": "Bermuda",
+"code": "BM",
+"emoji": "🇧🇲",
+"iso3": "BMU",
+"capital": "Hamilton",
+"phone_code": "+1-441",
+"currency": "BMD",
+"language": "bamanankan"
+},
+"BN": {
+"name": "Brunei",
+"code": "BN",
+"emoji": "🇧🇳",
+"iso3": "BRN",
+"capital": "Bandar Seri Begawan",
+"phone_code": "673",
+"currency": "BND",
+"language": "বাংলা"
+},
+"BO": {
+"name": "Bolivia",
+"code": "BO",
+"emoji": "🇧🇴",
+"iso3": "BOL",
+"capital": "Sucre",
+"phone_code": "591",
+"currency": "BOB",
+"language": "བོད་ཡིག"
+},
+"BQ": {
+"name": "Caribbean Netherlands",
+"code": "BQ",
+"emoji": "🇧🇶",
+"iso3": "BES",
+"capital": "",
+"phone_code": "599",
+"currency": "USD",
+"language": ""
+},
+"BR": {
+"name": "Brazil",
+"code": "BR",
+"emoji": "🇧🇷",
+"iso3": "BRA",
+"capital": "Brasilia",
+"phone_code": "55",
+"currency": "BRL",
+"language": "brezhoneg"
+},
+"BS": {
+"name": "Bahamas",
+"code": "BS",
+"emoji": "🇧🇸",
+"iso3": "BHS",
+"capital": "Nassau",
+"phone_code": "+1-242",
+"currency": "BSD",
+"language": "bosanski jezik"
+},
+"BT": {
+"name": "Bhutan",
+"code": "BT",
+"emoji": "🇧🇹",
+"iso3": "BTN",
+"capital": "Thimphu",
+"phone_code": "975",
+"currency": "BTN",
+"language": ""
+},
+"BV": {
+"name": "Bouvet Island",
+"code": "BV",
+"emoji": "🇧🇻",
+"iso3": "BVT",
+"capital": "",
+"phone_code": "",
+"currency": "NOK",
+"language": ""
+},
+"BW": {
+"name": "Botswana",
+"code": "BW",
+"emoji": "🇧🇼",
+"iso3": "BWA",
+"capital": "Gaborone",
+"phone_code": "267",
+"currency": "BWP",
+"language": ""
+},
+"BY": {
+"name": "Belarus",
+"code": "BY",
+"emoji": "🇧🇾",
+"iso3": "BLR",
+"capital": "Minsk",
+"phone_code": "375",
+"currency": "BYR",
+"language": ""
+},
+"BZ": {
+"name": "Belize",
+"code": "BZ",
+"emoji": "🇧🇿",
+"iso3": "BLZ",
+"capital": "Belmopan",
+"phone_code": "501",
+"currency": "BZD",
+"language": ""
+},
+"CA": {
+"name": "Canada",
+"code": "CA",
+"emoji": "🇨🇦",
+"iso3": "CAN",
+"capital": "Ottawa",
+"phone_code": "1",
+"currency": "CAD",
+"language": "Català"
+},
+"CC": {
+"name": "Cocos (Keeling) Islands",
+"code": "CC",
+"emoji": "🇨🇨",
+"iso3": "CCK",
+"capital": "West Island",
+"phone_code": "61",
+"currency": "AUD",
+"language": ""
+},
+"CD": {
+"name": "Congo - Kinshasa",
+"code": "CD",
+"emoji": "🇨🇩",
+"iso3": "COD",
+"capital": "Kinshasa",
+"phone_code": "243",
+"currency": "CDF",
+"language": ""
+},
+"CF": {
+"name": "Central African Republic",
+"code": "CF",
+"emoji": "🇨🇫",
+"iso3": "CAF",
+"capital": "Bangui",
+"phone_code": "236",
+"currency": "XAF",
+"language": ""
+},
+"CG": {
+"name": "Congo - Brazzaville",
+"code": "CG",
+"emoji": "🇨🇬",
+"iso3": "COG",
+"capital": "Brazzaville",
+"phone_code": "242",
+"currency": "XAF",
+"language": ""
+},
+"CH": {
+"name": "Switzerland",
+"code": "CH",
+"emoji": "🇨🇭",
+"iso3": "CHE",
+"capital": "Berne",
+"phone_code": "41",
+"currency": "CHF",
+"language": "Chamoru"
+},
+"CI": {
+"name": "Côte d’Ivoire",
+"code": "CI",
+"emoji": "🇨🇮",
+"iso3": "CIV",
+"capital": "Yamoussoukro",
+"phone_code": "225",
+"currency": "XOF",
+"language": ""
+},
+"CK": {
+"name": "Cook Islands",
+"code": "CK",
+"emoji": "🇨🇰",
+"iso3": "COK",
+"capital": "Avarua",
+"phone_code": "682",
+"currency": "NZD",
+"language": ""
+},
+"CL": {
+"name": "Chile",
+"code": "CL",
+"emoji": "🇨🇱",
+"iso3": "CHL",
+"capital": "Santiago",
+"phone_code": "56",
+"currency": "CLP",
+"language": ""
+},
+"CM": {
+"name": "Cameroon",
+"code": "CM",
+"emoji": "🇨🇲",
+"iso3": "CMR",
+"capital": "Yaounde",
+"phone_code": "237",
+"currency": "XAF",
+"language": ""
+},
+"CN": {
+"name": "China",
+"code": "CN",
+"emoji": "🇨🇳",
+"iso3": "CHN",
+"capital": "Beijing",
+"phone_code": "86",
+"currency": "CNY",
+"language": ""
+},
+"CO": {
+"name": "Colombia",
+"code": "CO",
+"emoji": "🇨🇴",
+"iso3": "COL",
+"capital": "Bogota",
+"phone_code": "57",
+"currency": "COP",
+"language": "corsu, lingua corsa"
+},
+"CP": {
+"name": "Clipperton Island",
+"code": "CP",
+"emoji": "🇨🇵",
+"iso3": "",
+"capital": "",
+"phone_code": "",
+"currency": "",
+"language": ""
+},
+"CR": {
+"name": "Costa Rica",
+"code": "CR",
+"emoji": "🇨🇷",
+"iso3": "CRI",
+"capital": "San Jose",
+"phone_code": "506",
+"currency": "CRC",
+"language": "ᓀᐦᐃᔭᐍᐏᐣ"
+},
+"CU": {
+"name": "Cuba",
+"code": "CU",
+"emoji": "🇨🇺",
+"iso3": "CUB",
+"capital": "Havana",
+"phone_code": "53",
+"currency": "CUP",
+"language": "ѩзыкъ словѣньскъ"
+},
+"CV": {
+"name": "Cape Verde",
+"code": "CV",
+"emoji": "🇨🇻",
+"iso3": "CPV",
+"capital": "Praia",
+"phone_code": "238",
+"currency": "CVE",
+"language": "чӑваш чӗлхи"
+},
+"CW": {
+"name": "Curaçao",
+"code": "CW",
+"emoji": "🇨🇼",
+"iso3": "CUW",
+"capital": " Willemstad",
+"phone_code": "599",
+"currency": "ANG",
+"language": ""
+},
+"CX": {
+"name": "Christmas Island",
+"code": "CX",
+"emoji": "🇨🇽",
+"iso3": "CXR",
+"capital": "Flying Fish Cove",
+"phone_code": "61",
+"currency": "AUD",
+"language": ""
+},
+"CY": {
+"name": "Cyprus",
+"code": "CY",
+"emoji": "🇨🇾",
+"iso3": "CYP",
+"capital": "Nicosia",
+"phone_code": "357",
+"currency": "EUR",
+"language": "Cymraeg"
+},
+"CZ": {
+"name": "Czechia",
+"code": "CZ",
+"emoji": "🇨🇿",
+"iso3": "CZE",
+"capital": "Prague",
+"phone_code": "420",
+"currency": "CZK",
+"language": ""
+},
+"DE": {
+"name": "Germany",
+"code": "DE",
+"emoji": "🇩🇪",
+"iso3": "DEU",
+"capital": "Berlin",
+"phone_code": "49",
+"currency": "EUR",
+"language": "Deutsch"
+},
+"DG": {
+"name": "Diego Garcia",
+"code": "DG",
+"emoji": "🇩🇬",
+"iso3": "",
+"capital": "",
+"phone_code": "",
+"currency": "",
+"language": ""
+},
+"DJ": {
+"name": "Djibouti",
+"code": "DJ",
+"emoji": "🇩🇯",
+"iso3": "DJI",
+"capital": "Djibouti",
+"phone_code": "253",
+"currency": "DJF",
+"language": ""
+},
+"DK": {
+"name": "Denmark",
+"code": "DK",
+"emoji": "🇩🇰",
+"iso3": "DNK",
+"capital": "Copenhagen",
+"phone_code": "45",
+"currency": "DKK",
+"language": ""
+},
+"DM": {
+"name": "Dominica",
+"code": "DM",
+"emoji": "🇩🇲",
+"iso3": "DMA",
+"capital": "Roseau",
+"phone_code": "+1-767",
+"currency": "XCD",
+"language": ""
+},
+"DO": {
+"name": "Dominican Republic",
+"code": "DO",
+"emoji": "🇩🇴",
+"iso3": "DOM",
+"capital": "Santo Domingo",
+"phone_code": "+1-809 and 1-829",
+"currency": "DOP",
+"language": ""
+},
+"DZ": {
+"name": "Algeria",
+"code": "DZ",
+"emoji": "🇩🇿",
+"iso3": "DZA",
+"capital": "Algiers",
+"phone_code": "213",
+"currency": "DZD",
+"language": ""
+},
+"EA": {
+"name": "Ceuta & Melilla",
+"code": "EA",
+"emoji": "🇪🇦",
+"iso3": "",
+"capital": "",
+"phone_code": "",
+"currency": "",
+"language": ""
+},
+"EC": {
+"name": "Ecuador",
+"code": "EC",
+"emoji": "🇪🇨",
+"iso3": "ECU",
+"capital": "Quito",
+"phone_code": "593",
+"currency": "USD",
+"language": ""
+},
+"EE": {
+"name": "Estonia",
+"code": "EE",
+"emoji": "🇪🇪",
+"iso3": "EST",
+"capital": "Tallinn",
+"phone_code": "372",
+"currency": "EUR",
+"language": "Eʋegbe"
+},
+"EG": {
+"name": "Egypt",
+"code": "EG",
+"emoji": "🇪🇬",
+"iso3": "EGY",
+"capital": "Cairo",
+"phone_code": "20",
+"currency": "EGP",
+"language": ""
+},
+"EH": {
+"name": "Western Sahara",
+"code": "EH",
+"emoji": "🇪🇭",
+"iso3": "ESH",
+"capital": "El-Aaiun",
+"phone_code": "212",
+"currency": "MAD",
+"language": ""
+},
+"ER": {
+"name": "Eritrea",
+"code": "ER",
+"emoji": "🇪🇷",
+"iso3": "ERI",
+"capital": "Asmara",
+"phone_code": "291",
+"currency": "ERN",
+"language": ""
+},
+"ES": {
+"name": "Spain",
+"code": "ES",
+"emoji": "🇪🇸",
+"iso3": "ESP",
+"capital": "Madrid",
+"phone_code": "34",
+"currency": "EUR",
+"language": "español, castellano"
+},
+"ET": {
+"name": "Ethiopia",
+"code": "ET",
+"emoji": "🇪🇹",
+"iso3": "ETH",
+"capital": "Addis Ababa",
+"phone_code": "251",
+"currency": "ETB",
+"language": "eesti, eesti keel"
+},
+"EU": {
+"name": "European Union",
+"code": "EU",
+"emoji": "🇪🇺",
+"iso3": "",
+"capital": "",
+"phone_code": "",
+"currency": "",
+"language": "euskara, euskera"
+},
+"FI": {
+"name": "Finland",
+"code": "FI",
+"emoji": "🇫🇮",
+"iso3": "FIN",
+"capital": "Helsinki",
+"phone_code": "358",
+"currency": "EUR",
+"language": "suomi, suomen kieli"
+},
+"FJ": {
+"name": "Fiji",
+"code": "FJ",
+"emoji": "🇫🇯",
+"iso3": "FJI",
+"capital": "Suva",
+"phone_code": "679",
+"currency": "FJD",
+"language": "vosa Vakaviti"
+},
+"FK": {
+"name": "Falkland Islands",
+"code": "FK",
+"emoji": "🇫🇰",
+"iso3": "FLK",
+"capital": "Stanley",
+"phone_code": "500",
+"currency": "FKP",
+"language": ""
+},
+"FM": {
+"name": "Micronesia",
+"code": "FM",
+"emoji": "🇫🇲",
+"iso3": "FSM",
+"capital": "Palikir",
+"phone_code": "691",
+"currency": "USD",
+"language": ""
+},
+"FO": {
+"name": "Faroe Islands",
+"code": "FO",
+"emoji": "🇫🇴",
+"iso3": "FRO",
+"capital": "Torshavn",
+"phone_code": "298",
+"currency": "DKK",
+"language": "føroyskt"
+},
+"FR": {
+"name": "France",
+"code": "FR",
+"emoji": "🇫🇷",
+"iso3": "FRA",
+"capital": "Paris",
+"phone_code": "33",
+"currency": "EUR",
+"language": "français, langue française"
+},
+"GA": {
+"name": "Gabon",
+"code": "GA",
+"emoji": "🇬🇦",
+"iso3": "GAB",
+"capital": "Libreville",
+"phone_code": "241",
+"currency": "XAF",
+"language": "Gaeilge"
+},
+"GB": {
+"name": "United Kingdom",
+"code": "GB",
+"emoji": "🇬🇧",
+"iso3": "GBR",
+"capital": "London",
+"phone_code": "44",
+"currency": "GBP",
+"language": ""
+},
+"GD": {
+"name": "Grenada",
+"code": "GD",
+"emoji": "🇬🇩",
+"iso3": "GRD",
+"capital": "St. George's",
+"phone_code": "+1-473",
+"currency": "XCD",
+"language": "Gàidhlig"
+},
+"GE": {
+"name": "Georgia",
+"code": "GE",
+"emoji": "🇬🇪",
+"iso3": "GEO",
+"capital": "Tbilisi",
+"phone_code": "995",
+"currency": "GEL",
+"language": ""
+},
+"GF": {
+"name": "French Guiana",
+"code": "GF",
+"emoji": "🇬🇫",
+"iso3": "GUF",
+"capital": "Cayenne",
+"phone_code": "594",
+"currency": "EUR",
+"language": ""
+},
+"GG": {
+"name": "Guernsey",
+"code": "GG",
+"emoji": "🇬🇬",
+"iso3": "GGY",
+"capital": "St Peter Port",
+"phone_code": "+44-1481",
+"currency": "GBP",
+"language": ""
+},
+"GH": {
+"name": "Ghana",
+"code": "GH",
+"emoji": "🇬🇭",
+"iso3": "GHA",
+"capital": "Accra",
+"phone_code": "233",
+"currency": "GHS",
+"language": ""
+},
+"GI": {
+"name": "Gibraltar",
+"code": "GI",
+"emoji": "🇬🇮",
+"iso3": "GIB",
+"capital": "Gibraltar",
+"phone_code": "350",
+"currency": "GIP",
+"language": ""
+},
+"GL": {
+"name": "Greenland",
+"code": "GL",
+"emoji": "🇬🇱",
+"iso3": "GRL",
+"capital": "Nuuk",
+"phone_code": "299",
+"currency": "DKK",
+"language": "Galego"
+},
+"GM": {
+"name": "Gambia",
+"code": "GM",
+"emoji": "🇬🇲",
+"iso3": "GMB",
+"capital": "Banjul",
+"phone_code": "220",
+"currency": "GMD",
+"language": ""
+},
+"GN": {
+"name": "Guinea",
+"code": "GN",
+"emoji": "🇬🇳",
+"iso3": "GIN",
+"capital": "Conakry",
+"phone_code": "224",
+"currency": "GNF",
+"language": "Avañeẽ"
+},
+"GP": {
+"name": "Guadeloupe",
+"code": "GP",
+"emoji": "🇬🇵",
+"iso3": "GLP",
+"capital": "Basse-Terre",
+"phone_code": "590",
+"currency": "EUR",
+"language": ""
+},
+"GQ": {
+"name": "Equatorial Guinea",
+"code": "GQ",
+"emoji": "🇬🇶",
+"iso3": "GNQ",
+"capital": "Malabo",
+"phone_code": "240",
+"currency": "XAF",
+"language": ""
+},
+"GR": {
+"name": "Greece",
+"code": "GR",
+"emoji": "🇬🇷",
+"iso3": "GRC",
+"capital": "Athens",
+"phone_code": "30",
+"currency": "EUR",
+"language": ""
+},
+"GS": {
+"name": "South Georgia & South Sandwich Islands",
+"code": "GS",
+"emoji": "🇬🇸",
+"iso3": "SGS",
+"capital": "Grytviken",
+"phone_code": "",
+"currency": "GBP",
+"language": ""
+},
+"GT": {
+"name": "Guatemala",
+"code": "GT",
+"emoji": "🇬🇹",
+"iso3": "GTM",
+"capital": "Guatemala City",
+"phone_code": "502",
+"currency": "GTQ",
+"language": ""
+},
+"GU": {
+"name": "Guam",
+"code": "GU",
+"emoji": "🇬🇺",
+"iso3": "GUM",
+"capital": "Hagatna",
+"phone_code": "+1-671",
+"currency": "USD",
+"language": "ગુજરાતી"
+},
+"GW": {
+"name": "Guinea-Bissau",
+"code": "GW",
+"emoji": "🇬🇼",
+"iso3": "GNB",
+"capital": "Bissau",
+"phone_code": "245",
+"currency": "XOF",
+"language": ""
+},
+"GY": {
+"name": "Guyana",
+"code": "GY",
+"emoji": "🇬🇾",
+"iso3": "GUY",
+"capital": "Georgetown",
+"phone_code": "592",
+"currency": "GYD",
+"language": ""
+},
+"HK": {
+"name": "Hong Kong SAR China",
+"code": "HK",
+"emoji": "🇭🇰",
+"iso3": "HKG",
+"capital": "Hong Kong",
+"phone_code": "852",
+"currency": "HKD",
+"language": ""
+},
+"HM": {
+"name": "Heard & McDonald Islands",
+"code": "HM",
+"emoji": "🇭🇲",
+"iso3": "HMD",
+"capital": "",
+"phone_code": " ",
+"currency": "AUD",
+"language": ""
+},
+"HN": {
+"name": "Honduras",
+"code": "HN",
+"emoji": "🇭🇳",
+"iso3": "HND",
+"capital": "Tegucigalpa",
+"phone_code": "504",
+"currency": "HNL",
+"language": ""
+},
+"HR": {
+"name": "Croatia",
+"code": "HR",
+"emoji": "🇭🇷",
+"iso3": "HRV",
+"capital": "Zagreb",
+"phone_code": "385",
+"currency": "HRK",
+"language": "hrvatski"
+},
+"HT": {
+"name": "Haiti",
+"code": "HT",
+"emoji": "🇭🇹",
+"iso3": "HTI",
+"capital": "Port-au-Prince",
+"phone_code": "509",
+"currency": "HTG",
+"language": "Kreyòl ayisyen"
+},
+"HU": {
+"name": "Hungary",
+"code": "HU",
+"emoji": "🇭🇺",
+"iso3": "HUN",
+"capital": "Budapest",
+"phone_code": "36",
+"currency": "HUF",
+"language": "Magyar"
+},
+"IC": {
+"name": "Canary Islands",
+"code": "IC",
+"emoji": "🇮🇨",
+"iso3": "",
+"capital": "",
+"phone_code": "",
+"currency": "",
+"language": ""
+},
+"ID": {
+"name": "Indonesia",
+"code": "ID",
+"emoji": "🇮🇩",
+"iso3": "IDN",
+"capital": "Jakarta",
+"phone_code": "62",
+"currency": "IDR",
+"language": "Bahasa Indonesia"
+},
+"IE": {
+"name": "Ireland",
+"code": "IE",
+"emoji": "🇮🇪",
+"iso3": "IRL",
+"capital": "Dublin",
+"phone_code": "353",
+"currency": "EUR",
+"language": "Originally called Occidental; then Interlingue after WWII"
+},
+"IL": {
+"name": "Israel",
+"code": "IL",
+"emoji": "🇮🇱",
+"iso3": "ISR",
+"capital": "Jerusalem",
+"phone_code": "972",
+"currency": "ILS",
+"language": ""
+},
+"IM": {
+"name": "Isle of Man",
+"code": "IM",
+"emoji": "🇮🇲",
+"iso3": "IMN",
+"capital": "Douglas, Isle of Man",
+"phone_code": "+44-1624",
+"currency": "GBP",
+"language": ""
+},
+"IN": {
+"name": "India",
+"code": "IN",
+"emoji": "🇮🇳",
+"iso3": "IND",
+"capital": "New Delhi",
+"phone_code": "91",
+"currency": "INR",
+"language": ""
+},
+"IO": {
+"name": "British Indian Ocean Territory",
+"code": "IO",
+"emoji": "🇮🇴",
+"iso3": "IOT",
+"capital": "Diego Garcia",
+"phone_code": "246",
+"currency": "USD",
+"language": "Ido"
+},
+"IQ": {
+"name": "Iraq",
+"code": "IQ",
+"emoji": "🇮🇶",
+"iso3": "IRQ",
+"capital": "Baghdad",
+"phone_code": "964",
+"currency": "IQD",
+"language": ""
+},
+"IR": {
+"name": "Iran",
+"code": "IR",
+"emoji": "🇮🇷",
+"iso3": "IRN",
+"capital": "Tehran",
+"phone_code": "98",
+"currency": "IRR",
+"language": ""
+},
+"IS": {
+"name": "Iceland",
+"code": "IS",
+"emoji": "🇮🇸",
+"iso3": "ISL",
+"capital": "Reykjavik",
+"phone_code": "354",
+"currency": "ISK",
+"language": "Íslenska"
+},
+"IT": {
+"name": "Italy",
+"code": "IT",
+"emoji": "🇮🇹",
+"iso3": "ITA",
+"capital": "Rome",
+"phone_code": "39",
+"currency": "EUR",
+"language": "Italiano"
+},
+"JE": {
+"name": "Jersey",
+"code": "JE",
+"emoji": "🇯🇪",
+"iso3": "JEY",
+"capital": "Saint Helier",
+"phone_code": "+44-1534",
+"currency": "GBP",
+"language": ""
+},
+"JM": {
+"name": "Jamaica",
+"code": "JM",
+"emoji": "🇯🇲",
+"iso3": "JAM",
+"capital": "Kingston",
+"phone_code": "+1-876",
+"currency": "JMD",
+"language": ""
+},
+"JO": {
+"name": "Jordan",
+"code": "JO",
+"emoji": "🇯🇴",
+"iso3": "JOR",
+"capital": "Amman",
+"phone_code": "962",
+"currency": "JOD",
+"language": ""
+},
+"JP": {
+"name": "Japan",
+"code": "JP",
+"emoji": "🇯🇵",
+"iso3": "JPN",
+"capital": "Tokyo",
+"phone_code": "81",
+"currency": "JPY",
+"language": ""
+},
+"KE": {
+"name": "Kenya",
+"code": "KE",
+"emoji": "🇰🇪",
+"iso3": "KEN",
+"capital": "Nairobi",
+"phone_code": "254",
+"currency": "KES",
+"language": ""
+},
+"KG": {
+"name": "Kyrgyzstan",
+"code": "KG",
+"emoji": "🇰🇬",
+"iso3": "KGZ",
+"capital": "Bishkek",
+"phone_code": "996",
+"currency": "KGS",
+"language": "KiKongo"
+},
+"KH": {
+"name": "Cambodia",
+"code": "KH",
+"emoji": "🇰🇭",
+"iso3": "KHM",
+"capital": "Phnom Penh",
+"phone_code": "855",
+"currency": "KHR",
+"language": ""
+},
+"KI": {
+"name": "Kiribati",
+"code": "KI",
+"emoji": "🇰🇮",
+"iso3": "KIR",
+"capital": "Tarawa",
+"phone_code": "686",
+"currency": "AUD",
+"language": "Gĩkũyũ"
+},
+"KM": {
+"name": "Comoros",
+"code": "KM",
+"emoji": "🇰🇲",
+"iso3": "COM",
+"capital": "Moroni",
+"phone_code": "269",
+"currency": "KMF",
+"language": "ភាសាខ្មែរ"
+},
+"KN": {
+"name": "St. Kitts & Nevis",
+"code": "KN",
+"emoji": "🇰🇳",
+"iso3": "KNA",
+"capital": "Basseterre",
+"phone_code": "+1-869",
+"currency": "XCD",
+"language": "ಕನ್ನಡ"
+},
+"KP": {
+"name": "North Korea",
+"code": "KP",
+"emoji": "🇰🇵",
+"iso3": "PRK",
+"capital": "Pyongyang",
+"phone_code": "850",
+"currency": "KPW",
+"language": ""
+},
+"KR": {
+"name": "South Korea",
+"code": "KR",
+"emoji": "🇰🇷",
+"iso3": "KOR",
+"capital": "Seoul",
+"phone_code": "82",
+"currency": "KRW",
+"language": "Kanuri"
+},
+"KW": {
+"name": "Kuwait",
+"code": "KW",
+"emoji": "🇰🇼",
+"iso3": "KWT",
+"capital": "Kuwait City",
+"phone_code": "965",
+"currency": "KWD",
+"language": "Kernewek"
+},
+"KY": {
+"name": "Cayman Islands",
+"code": "KY",
+"emoji": "🇰🇾",
+"iso3": "CYM",
+"capital": "George Town",
+"phone_code": "+1-345",
+"currency": "KYD",
+"language": "кыргыз тили"
+},
+"KZ": {
+"name": "Kazakhstan",
+"code": "KZ",
+"emoji": "🇰🇿",
+"iso3": "KAZ",
+"capital": "Astana",
+"phone_code": "7",
+"currency": "KZT",
+"language": ""
+},
+"LA": {
+"name": "Laos",
+"code": "LA",
+"emoji": "🇱🇦",
+"iso3": "LAO",
+"capital": "Vientiane",
+"phone_code": "856",
+"currency": "LAK",
+"language": "latine, lingua latina"
+},
+"LB": {
+"name": "Lebanon",
+"code": "LB",
+"emoji": "🇱🇧",
+"iso3": "LBN",
+"capital": "Beirut",
+"phone_code": "961",
+"currency": "LBP",
+"language": "Lëtzebuergesch"
+},
+"LC": {
+"name": "St. Lucia",
+"code": "LC",
+"emoji": "🇱🇨",
+"iso3": "LCA",
+"capital": "Castries",
+"phone_code": "+1-758",
+"currency": "XCD",
+"language": ""
+},
+"LI": {
+"name": "Liechtenstein",
+"code": "LI",
+"emoji": "🇱🇮",
+"iso3": "LIE",
+"capital": "Vaduz",
+"phone_code": "423",
+"currency": "CHF",
+"language": "Limburgs"
+},
+"LK": {
+"name": "Sri Lanka",
+"code": "LK",
+"emoji": "🇱🇰",
+"iso3": "LKA",
+"capital": "Colombo",
+"phone_code": "94",
+"currency": "LKR",
+"language": ""
+},
+"LR": {
+"name": "Liberia",
+"code": "LR",
+"emoji": "🇱🇷",
+"iso3": "LBR",
+"capital": "Monrovia",
+"phone_code": "231",
+"currency": "LRD",
+"language": ""
+},
+"LS": {
+"name": "Lesotho",
+"code": "LS",
+"emoji": "🇱🇸",
+"iso3": "LSO",
+"capital": "Maseru",
+"phone_code": "266",
+"currency": "LSL",
+"language": ""
+},
+"LT": {
+"name": "Lithuania",
+"code": "LT",
+"emoji": "🇱🇹",
+"iso3": "LTU",
+"capital": "Vilnius",
+"phone_code": "370",
+"currency": "LTL",
+"language": "lietuvių kalba"
+},
+"LU": {
+"name": "Luxembourg",
+"code": "LU",
+"emoji": "🇱🇺",
+"iso3": "LUX",
+"capital": "Luxembourg",
+"phone_code": "352",
+"currency": "EUR",
+"language": ""
+},
+"LV": {
+"name": "Latvia",
+"code": "LV",
+"emoji": "🇱🇻",
+"iso3": "LVA",
+"capital": "Riga",
+"phone_code": "371",
+"currency": "EUR",
+"language": "latviešu valoda"
+},
+"LY": {
+"name": "Libya",
+"code": "LY",
+"emoji": "🇱🇾",
+"iso3": "LBY",
+"capital": "Tripolis",
+"phone_code": "218",
+"currency": "LYD",
+"language": ""
+},
+"MA": {
+"name": "Morocco",
+"code": "MA",
+"emoji": "🇲🇦",
+"iso3": "MAR",
+"capital": "Rabat",
+"phone_code": "212",
+"currency": "MAD",
+"language": ""
+},
+"MC": {
+"name": "Monaco",
+"code": "MC",
+"emoji": "🇲🇨",
+"iso3": "MCO",
+"capital": "Monaco",
+"phone_code": "377",
+"currency": "EUR",
+"language": ""
+},
+"MD": {
+"name": "Moldova",
+"code": "MD",
+"emoji": "🇲🇩",
+"iso3": "MDA",
+"capital": "Chisinau",
+"phone_code": "373",
+"currency": "MDL",
+"language": ""
+},
+"ME": {
+"name": "Montenegro",
+"code": "ME",
+"emoji": "🇲🇪",
+"iso3": "MNE",
+"capital": "Podgorica",
+"phone_code": "382",
+"currency": "EUR",
+"language": ""
+},
+"MF": {
+"name": "St. Martin",
+"code": "MF",
+"emoji": "🇲🇫",
+"iso3": "MAF",
+"capital": "Marigot",
+"phone_code": "590",
+"currency": "EUR",
+"language": ""
+},
+"MG": {
+"name": "Madagascar",
+"code": "MG",
+"emoji": "🇲🇬",
+"iso3": "MDG",
+"capital": "Antananarivo",
+"phone_code": "261",
+"currency": "MGA",
+"language": "Malagasy fiteny"
+},
+"MH": {
+"name": "Marshall Islands",
+"code": "MH",
+"emoji": "🇲🇭",
+"iso3": "MHL",
+"capital": "Majuro",
+"phone_code": "692",
+"currency": "USD",
+"language": "Kajin M̧ajeļ"
+},
+"MK": {
+"name": "North Macedonia",
+"code": "MK",
+"emoji": "🇲🇰",
+"iso3": "MKD",
+"capital": "Skopje",
+"phone_code": "389",
+"currency": "MKD",
+"language": "македонски јазик"
+},
+"ML": {
+"name": "Mali",
+"code": "ML",
+"emoji": "🇲🇱",
+"iso3": "MLI",
+"capital": "Bamako",
+"phone_code": "223",
+"currency": "XOF",
+"language": "മലയാളം"
+},
+"MM": {
+"name": "Myanmar (Burma)",
+"code": "MM",
+"emoji": "🇲🇲",
+"iso3": "MMR",
+"capital": "Nay Pyi Taw",
+"phone_code": "95",
+"currency": "MMK",
+"language": ""
+},
+"MN": {
+"name": "Mongolia",
+"code": "MN",
+"emoji": "🇲🇳",
+"iso3": "MNG",
+"capital": "Ulan Bator",
+"phone_code": "976",
+"currency": "MNT",
+"language": "монгол"
+},
+"MO": {
+"name": "Macao SAR China",
+"code": "MO",
+"emoji": "🇲🇴",
+"iso3": "MAC",
+"capital": "Macao",
+"phone_code": "853",
+"currency": "MOP",
+"language": ""
+},
+"MP": {
+"name": "Northern Mariana Islands",
+"code": "MP",
+"emoji": "🇲🇵",
+"iso3": "MNP",
+"capital": "Saipan",
+"phone_code": "+1-670",
+"currency": "USD",
+"language": ""
+},
+"MQ": {
+"name": "Martinique",
+"code": "MQ",
+"emoji": "🇲🇶",
+"iso3": "MTQ",
+"capital": "Fort-de-France",
+"phone_code": "596",
+"currency": "EUR",
+"language": ""
+},
+"MR": {
+"name": "Mauritania",
+"code": "MR",
+"emoji": "🇲🇷",
+"iso3": "MRT",
+"capital": "Nouakchott",
+"phone_code": "222",
+"currency": "MRO",
+"language": "मराठी"
+},
+"MS": {
+"name": "Montserrat",
+"code": "MS",
+"emoji": "🇲🇸",
+"iso3": "MSR",
+"capital": "Plymouth",
+"phone_code": "+1-664",
+"currency": "XCD",
+"language": "bahasa Melayu, بهاس ملايو‎"
+},
+"MT": {
+"name": "Malta",
+"code": "MT",
+"emoji": "🇲🇹",
+"iso3": "MLT",
+"capital": "Valletta",
+"phone_code": "356",
+"currency": "EUR",
+"language": "Malti"
+},
+"MU": {
+"name": "Mauritius",
+"code": "MU",
+"emoji": "🇲🇺",
+"iso3": "MUS",
+"capital": "Port Louis",
+"phone_code": "230",
+"currency": "MUR",
+"language": ""
+},
+"MV": {
+"name": "Maldives",
+"code": "MV",
+"emoji": "🇲🇻",
+"iso3": "MDV",
+"capital": "Male",
+"phone_code": "960",
+"currency": "MVR",
+"language": ""
+},
+"MW": {
+"name": "Malawi",
+"code": "MW",
+"emoji": "🇲🇼",
+"iso3": "MWI",
+"capital": "Lilongwe",
+"phone_code": "265",
+"currency": "MWK",
+"language": ""
+},
+"MX": {
+"name": "Mexico",
+"code": "MX",
+"emoji": "🇲🇽",
+"iso3": "MEX",
+"capital": "Mexico City",
+"phone_code": "52",
+"currency": "MXN",
+"language": ""
+},
+"MY": {
+"name": "Malaysia",
+"code": "MY",
+"emoji": "🇲🇾",
+"iso3": "MYS",
+"capital": "Kuala Lumpur",
+"phone_code": "60",
+"currency": "MYR",
+"language": "ဗမာစာ"
+},
+"MZ": {
+"name": "Mozambique",
+"code": "MZ",
+"emoji": "🇲🇿",
+"iso3": "MOZ",
+"capital": "Maputo",
+"phone_code": "258",
+"currency": "MZN",
+"language": ""
+},
+"NA": {
+"name": "Namibia",
+"code": "NA",
+"emoji": "🇳🇦",
+"iso3": "NAM",
+"capital": "Windhoek",
+"phone_code": "264",
+"currency": "NAD",
+"language": "Ekakairũ Naoero"
+},
+"NC": {
+"name": "New Caledonia",
+"code": "NC",
+"emoji": "🇳🇨",
+"iso3": "NCL",
+"capital": "Noumea",
+"phone_code": "687",
+"currency": "XPF",
+"language": ""
+},
+"NE": {
+"name": "Niger",
+"code": "NE",
+"emoji": "🇳🇪",
+"iso3": "NER",
+"capital": "Niamey",
+"phone_code": "227",
+"currency": "XOF",
+"language": "नेपाली"
+},
+"NF": {
+"name": "Norfolk Island",
+"code": "NF",
+"emoji": "🇳🇫",
+"iso3": "NFK",
+"capital": "Kingston",
+"phone_code": "672",
+"currency": "AUD",
+"language": ""
+},
+"NG": {
+"name": "Nigeria",
+"code": "NG",
+"emoji": "🇳🇬",
+"iso3": "NGA",
+"capital": "Abuja",
+"phone_code": "234",
+"currency": "NGN",
+"language": "Owambo"
+},
+"NI": {
+"name": "Nicaragua",
+"code": "NI",
+"emoji": "🇳🇮",
+"iso3": "NIC",
+"capital": "Managua",
+"phone_code": "505",
+"currency": "NIO",
+"language": ""
+},
+"NL": {
+"name": "Netherlands",
+"code": "NL",
+"emoji": "🇳🇱",
+"iso3": "NLD",
+"capital": "Amsterdam",
+"phone_code": "31",
+"currency": "EUR",
+"language": "Nederlands, Vlaams"
+},
+"NO": {
+"name": "Norway",
+"code": "NO",
+"emoji": "🇳🇴",
+"iso3": "NOR",
+"capital": "Oslo",
+"phone_code": "47",
+"currency": "NOK",
+"language": "Norsk"
+},
+"NP": {
+"name": "Nepal",
+"code": "NP",
+"emoji": "🇳🇵",
+"iso3": "NPL",
+"capital": "Kathmandu",
+"phone_code": "977",
+"currency": "NPR",
+"language": ""
+},
+"NR": {
+"name": "Nauru",
+"code": "NR",
+"emoji": "🇳🇷",
+"iso3": "NRU",
+"capital": "Yaren",
+"phone_code": "674",
+"currency": "AUD",
+"language": "isiNdebele"
+},
+"NU": {
+"name": "Niue",
+"code": "NU",
+"emoji": "🇳🇺",
+"iso3": "NIU",
+"capital": "Alofi",
+"phone_code": "683",
+"currency": "NZD",
+"language": ""
+},
+"NZ": {
+"name": "New Zealand",
+"code": "NZ",
+"emoji": "🇳🇿",
+"iso3": "NZL",
+"capital": "Wellington",
+"phone_code": "64",
+"currency": "NZD",
+"language": ""
+},
+"OM": {
+"name": "Oman",
+"code": "OM",
+"emoji": "🇴🇲",
+"iso3": "OMN",
+"capital": "Muscat",
+"phone_code": "968",
+"currency": "OMR",
+"language": "Afaan Oromoo"
+},
+"PA": {
+"name": "Panama",
+"code": "PA",
+"emoji": "🇵🇦",
+"iso3": "PAN",
+"capital": "Panama City",
+"phone_code": "507",
+"currency": "PAB",
+"language": "ਪੰਜਾਬੀ, پنجابی‎"
+},
+"PE": {
+"name": "Peru",
+"code": "PE",
+"emoji": "🇵🇪",
+"iso3": "PER",
+"capital": "Lima",
+"phone_code": "51",
+"currency": "PEN",
+"language": ""
+},
+"PF": {
+"name": "French Polynesia",
+"code": "PF",
+"emoji": "🇵🇫",
+"iso3": "PYF",
+"capital": "Papeete",
+"phone_code": "689",
+"currency": "XPF",
+"language": ""
+},
+"PG": {
+"name": "Papua New Guinea",
+"code": "PG",
+"emoji": "🇵🇬",
+"iso3": "PNG",
+"capital": "Port Moresby",
+"phone_code": "675",
+"currency": "PGK",
+"language": ""
+},
+"PH": {
+"name": "Philippines",
+"code": "PH",
+"emoji": "🇵🇭",
+"iso3": "PHL",
+"capital": "Manila",
+"phone_code": "63",
+"currency": "PHP",
+"language": ""
+},
+"PK": {
+"name": "Pakistan",
+"code": "PK",
+"emoji": "🇵🇰",
+"iso3": "PAK",
+"capital": "Islamabad",
+"phone_code": "92",
+"currency": "PKR",
+"language": ""
+},
+"PL": {
+"name": "Poland",
+"code": "PL",
+"emoji": "🇵🇱",
+"iso3": "POL",
+"capital": "Warsaw",
+"phone_code": "48",
+"currency": "PLN",
+"language": "polski"
+},
+"PM": {
+"name": "St. Pierre & Miquelon",
+"code": "PM",
+"emoji": "🇵🇲",
+"iso3": "SPM",
+"capital": "Saint-Pierre",
+"phone_code": "508",
+"currency": "EUR",
+"language": ""
+},
+"PN": {
+"name": "Pitcairn Islands",
+"code": "PN",
+"emoji": "🇵🇳",
+"iso3": "PCN",
+"capital": "Adamstown",
+"phone_code": "870",
+"currency": "NZD",
+"language": ""
+},
+"PR": {
+"name": "Puerto Rico",
+"code": "PR",
+"emoji": "🇵🇷",
+"iso3": "PRI",
+"capital": "San Juan",
+"phone_code": "+1-787 and 1-939",
+"currency": "USD",
+"language": ""
+},
+"PS": {
+"name": "Palestinian Territories",
+"code": "PS",
+"emoji": "🇵🇸",
+"iso3": "PSE",
+"capital": "East Jerusalem",
+"phone_code": "970",
+"currency": "ILS",
+"language": "پښتو"
+},
+"PT": {
+"name": "Portugal",
+"code": "PT",
+"emoji": "🇵🇹",
+"iso3": "PRT",
+"capital": "Lisbon",
+"phone_code": "351",
+"currency": "EUR",
+"language": "Português"
+},
+"PW": {
+"name": "Palau",
+"code": "PW",
+"emoji": "🇵🇼",
+"iso3": "PLW",
+"capital": "Melekeok",
+"phone_code": "680",
+"currency": "USD",
+"language": ""
+},
+"PY": {
+"name": "Paraguay",
+"code": "PY",
+"emoji": "🇵🇾",
+"iso3": "PRY",
+"capital": "Asuncion",
+"phone_code": "595",
+"currency": "PYG",
+"language": ""
+},
+"QA": {
+"name": "Qatar",
+"code": "QA",
+"emoji": "🇶🇦",
+"iso3": "QAT",
+"capital": "Doha",
+"phone_code": "974",
+"currency": "QAR",
+"language": ""
+},
+"RE": {
+"name": "Réunion",
+"code": "RE",
+"emoji": "🇷🇪",
+"iso3": "REU",
+"capital": "Saint-Denis",
+"phone_code": "262",
+"currency": "EUR",
+"language": ""
+},
+"RO": {
+"name": "Romania",
+"code": "RO",
+"emoji": "🇷🇴",
+"iso3": "ROU",
+"capital": "Bucharest",
+"phone_code": "40",
+"currency": "RON",
+"language": "română"
+},
+"RS": {
+"name": "Serbia",
+"code": "RS",
+"emoji": "🇷🇸",
+"iso3": "SRB",
+"capital": "Belgrade",
+"phone_code": "381",
+"currency": "RSD",
+"language": ""
+},
+"RU": {
+"name": "Russia",
+"code": "RU",
+"emoji": "🇷🇺",
+"iso3": "RUS",
+"capital": "Moscow",
+"phone_code": "7",
+"currency": "RUB",
+"language": "русский язык"
+},
+"RW": {
+"name": "Rwanda",
+"code": "RW",
+"emoji": "🇷🇼",
+"iso3": "RWA",
+"capital": "Kigali",
+"phone_code": "250",
+"currency": "RWF",
+"language": "Ikinyarwanda"
+},
+"SA": {
+"name": "Saudi Arabia",
+"code": "SA",
+"emoji": "🇸🇦",
+"iso3": "SAU",
+"capital": "Riyadh",
+"phone_code": "966",
+"currency": "SAR",
+"language": "संस्कृतम्"
+},
+"SB": {
+"name": "Solomon Islands",
+"code": "SB",
+"emoji": "🇸🇧",
+"iso3": "SLB",
+"capital": "Honiara",
+"phone_code": "677",
+"currency": "SBD",
+"language": ""
+},
+"SC": {
+"name": "Seychelles",
+"code": "SC",
+"emoji": "🇸🇨",
+"iso3": "SYC",
+"capital": "Victoria",
+"phone_code": "248",
+"currency": "SCR",
+"language": "sardu"
+},
+"SD": {
+"name": "Sudan",
+"code": "SD",
+"emoji": "🇸🇩",
+"iso3": "SDN",
+"capital": "Khartoum",
+"phone_code": "249",
+"currency": "SDG",
+"language": "सिन्धी, سنڌي، سندھی‎"
+},
+"SE": {
+"name": "Sweden",
+"code": "SE",
+"emoji": "🇸🇪",
+"iso3": "SWE",
+"capital": "Stockholm",
+"phone_code": "46",
+"currency": "SEK",
+"language": "Davvisámegiella"
+},
+"SG": {
+"name": "Singapore",
+"code": "SG",
+"emoji": "🇸🇬",
+"iso3": "SGP",
+"capital": "Singapur",
+"phone_code": "65",
+"currency": "SGD",
+"language": "yângâ tî sängö"
+},
+"SH": {
+"name": "St. Helena",
+"code": "SH",
+"emoji": "🇸🇭",
+"iso3": "SHN",
+"capital": "Jamestown",
+"phone_code": "290",
+"currency": "SHP",
+"language": ""
+},
+"SI": {
+"name": "Slovenia",
+"code": "SI",
+"emoji": "🇸🇮",
+"iso3": "SVN",
+"capital": "Ljubljana",
+"phone_code": "386",
+"currency": "EUR",
+"language": "සිංහල"
+},
+"SJ": {
+"name": "Svalbard & Jan Mayen",
+"code": "SJ",
+"emoji": "🇸🇯",
+"iso3": "SJM",
+"capital": "Longyearbyen",
+"phone_code": "47",
+"currency": "NOK",
+"language": ""
+},
+"SK": {
+"name": "Slovakia",
+"code": "SK",
+"emoji": "🇸🇰",
+"iso3": "SVK",
+"capital": "Bratislava",
+"phone_code": "421",
+"currency": "EUR",
+"language": "slovenčina"
+},
+"SL": {
+"name": "Sierra Leone",
+"code": "SL",
+"emoji": "🇸🇱",
+"iso3": "SLE",
+"capital": "Freetown",
+"phone_code": "232",
+"currency": "SLL",
+"language": "slovenščina"
+},
+"SM": {
+"name": "San Marino",
+"code": "SM",
+"emoji": "🇸🇲",
+"iso3": "SMR",
+"capital": "San Marino",
+"phone_code": "378",
+"currency": "EUR",
+"language": "gagana faa Samoa"
+},
+"SN": {
+"name": "Senegal",
+"code": "SN",
+"emoji": "🇸🇳",
+"iso3": "SEN",
+"capital": "Dakar",
+"phone_code": "221",
+"currency": "XOF",
+"language": "chiShona"
+},
+"SO": {
+"name": "Somalia",
+"code": "SO",
+"emoji": "🇸🇴",
+"iso3": "SOM",
+"capital": "Mogadishu",
+"phone_code": "252",
+"currency": "SOS",
+"language": "Soomaaliga, af Soomaali"
+},
+"SR": {
+"name": "Suriname",
+"code": "SR",
+"emoji": "🇸🇷",
+"iso3": "SUR",
+"capital": "Paramaribo",
+"phone_code": "597",
+"currency": "SRD",
+"language": "српски језик"
+},
+"SS": {
+"name": "South Sudan",
+"code": "SS",
+"emoji": "🇸🇸",
+"iso3": "SSD",
+"capital": "Juba",
+"phone_code": "211",
+"currency": "SSP",
+"language": "SiSwati"
+},
+"ST": {
+"name": "São Tomé & Príncipe",
+"code": "ST",
+"emoji": "🇸🇹",
+"iso3": "STP",
+"capital": "Sao Tome",
+"phone_code": "239",
+"currency": "STD",
+"language": "Sesotho"
+},
+"SV": {
+"name": "El Salvador",
+"code": "SV",
+"emoji": "🇸🇻",
+"iso3": "SLV",
+"capital": "San Salvador",
+"phone_code": "503",
+"currency": "USD",
+"language": "svenska"
+},
+"SX": {
+"name": "Sint Maarten",
+"code": "SX",
+"emoji": "🇸🇽",
+"iso3": "SXM",
+"capital": "Philipsburg",
+"phone_code": "599",
+"currency": "ANG",
+"language": ""
+},
+"SY": {
+"name": "Syria",
+"code": "SY",
+"emoji": "🇸🇾",
+"iso3": "SYR",
+"capital": "Damascus",
+"phone_code": "963",
+"currency": "SYP",
+"language": ""
+},
+"SZ": {
+"name": "Eswatini",
+"code": "SZ",
+"emoji": "🇸🇿",
+"iso3": "SWZ",
+"capital": "Mbabane",
+"phone_code": "268",
+"currency": "SZL",
+"language": ""
+},
+"TA": {
+"name": "Tristan da Cunha",
+"code": "TA",
+"emoji": "🇹🇦",
+"iso3": "",
+"capital": "",
+"phone_code": "",
+"currency": "",
+"language": "தமிழ்"
+},
+"TC": {
+"name": "Turks & Caicos Islands",
+"code": "TC",
+"emoji": "🇹🇨",
+"iso3": "TCA",
+"capital": "Cockburn Town",
+"phone_code": "+1-649",
+"currency": "USD",
+"language": ""
+},
+"TD": {
+"name": "Chad",
+"code": "TD",
+"emoji": "🇹🇩",
+"iso3": "TCD",
+"capital": "N'Djamena",
+"phone_code": "235",
+"currency": "XAF",
+"language": ""
+},
+"TF": {
+"name": "French Southern Territories",
+"code": "TF",
+"emoji": "🇹🇫",
+"iso3": "ATF",
+"capital": "Port-aux-Francais",
+"phone_code": "",
+"currency": "EUR",
+"language": ""
+},
+"TG": {
+"name": "Togo",
+"code": "TG",
+"emoji": "🇹🇬",
+"iso3": "TGO",
+"capital": "Lome",
+"phone_code": "228",
+"currency": "XOF",
+"language": "тоҷикӣ, toğikī, تاجیکی‎"
+},
+"TH": {
+"name": "Thailand",
+"code": "TH",
+"emoji": "🇹🇭",
+"iso3": "THA",
+"capital": "Bangkok",
+"phone_code": "66",
+"currency": "THB",
+"language": "ไทย"
+},
+"TJ": {
+"name": "Tajikistan",
+"code": "TJ",
+"emoji": "🇹🇯",
+"iso3": "TJK",
+"capital": "Dushanbe",
+"phone_code": "992",
+"currency": "TJS",
+"language": ""
+},
+"TK": {
+"name": "Tokelau",
+"code": "TK",
+"emoji": "🇹🇰",
+"iso3": "TKL",
+"capital": "",
+"phone_code": "690",
+"currency": "NZD",
+"language": "Türkmen, Түркмен"
+},
+"TL": {
+"name": "Timor-Leste",
+"code": "TL",
+"emoji": "🇹🇱",
+"iso3": "TLS",
+"capital": "Dili",
+"phone_code": "670",
+"currency": "USD",
+"language": "Wikang Tagalog, ᜏᜒᜃᜅ᜔ ᜆᜄᜎᜓᜄ᜔"
+},
+"TM": {
+"name": "Turkmenistan",
+"code": "TM",
+"emoji": "🇹🇲",
+"iso3": "TKM",
+"capital": "Ashgabat",
+"phone_code": "993",
+"currency": "TMT",
+"language": ""
+},
+"TN": {
+"name": "Tunisia",
+"code": "TN",
+"emoji": "🇹🇳",
+"iso3": "TUN",
+"capital": "Tunis",
+"phone_code": "216",
+"currency": "TND",
+"language": "Setswana"
+},
+"TO": {
+"name": "Tonga",
+"code": "TO",
+"emoji": "🇹🇴",
+"iso3": "TON",
+"capital": "Nuku'alofa",
+"phone_code": "676",
+"currency": "TOP",
+"language": "faka Tonga"
+},
+"TR": {
+"name": "Turkey",
+"code": "TR",
+"emoji": "🇹🇷",
+"iso3": "TUR",
+"capital": "Ankara",
+"phone_code": "90",
+"currency": "TRY",
+"language": "Türkçe"
+},
+"TT": {
+"name": "Trinidad & Tobago",
+"code": "TT",
+"emoji": "🇹🇹",
+"iso3": "TTO",
+"capital": "Port of Spain",
+"phone_code": "+1-868",
+"currency": "TTD",
+"language": "татарча, tatarça, تاتارچا‎"
+},
+"TV": {
+"name": "Tuvalu",
+"code": "TV",
+"emoji": "🇹🇻",
+"iso3": "TUV",
+"capital": "Funafuti",
+"phone_code": "688",
+"currency": "AUD",
+"language": ""
+},
+"TW": {
+"name": "Taiwan",
+"code": "TW",
+"emoji": "🇹🇼",
+"iso3": "TWN",
+"capital": "Taipei",
+"phone_code": "886",
+"currency": "TWD",
+"language": "Twi"
+},
+"TZ": {
+"name": "Tanzania",
+"code": "TZ",
+"emoji": "🇹🇿",
+"iso3": "TZA",
+"capital": "Dodoma",
+"phone_code": "255",
+"currency": "TZS",
+"language": ""
+},
+"UA": {
+"name": "Ukraine",
+"code": "UA",
+"emoji": "🇺🇦",
+"iso3": "UKR",
+"capital": "Kiev",
+"phone_code": "380",
+"currency": "UAH",
+"language": ""
+},
+"UG": {
+"name": "Uganda",
+"code": "UG",
+"emoji": "🇺🇬",
+"iso3": "UGA",
+"capital": "Kampala",
+"phone_code": "256",
+"currency": "UGX",
+"language": "Uyƣurqə, ئۇيغۇرچە‎"
+},
+"UM": {
+"name": "U.S. Outlying Islands",
+"code": "UM",
+"emoji": "🇺🇲",
+"iso3": "UMI",
+"capital": "",
+"phone_code": "1",
+"currency": "USD",
+"language": ""
+},
+"UN": {
+"name": "United Nations",
+"code": "UN",
+"emoji": "🇺🇳",
+"iso3": "",
+"capital": "",
+"phone_code": "",
+"currency": "",
+"language": ""
+},
+"US": {
+"name": "United States",
+"code": "US",
+"emoji": "🇺🇸",
+"iso3": "USA",
+"capital": "Washington",
+"phone_code": "1",
+"currency": "USD",
+"language": ""
+},
+"UY": {
+"name": "Uruguay",
+"code": "UY",
+"emoji": "🇺🇾",
+"iso3": "URY",
+"capital": "Montevideo",
+"phone_code": "598",
+"currency": "UYU",
+"language": ""
+},
+"UZ": {
+"name": "Uzbekistan",
+"code": "UZ",
+"emoji": "🇺🇿",
+"iso3": "UZB",
+"capital": "Tashkent",
+"phone_code": "998",
+"currency": "UZS",
+"language": "zbek, Ўзбек, أۇزبېك‎"
+},
+"VA": {
+"name": "Vatican City",
+"code": "VA",
+"emoji": "🇻🇦",
+"iso3": "VAT",
+"capital": "Vatican City",
+"phone_code": "379",
+"currency": "EUR",
+"language": ""
+},
+"VC": {
+"name": "St. Vincent & Grenadines",
+"code": "VC",
+"emoji": "🇻🇨",
+"iso3": "VCT",
+"capital": "Kingstown",
+"phone_code": "+1-784",
+"currency": "XCD",
+"language": ""
+},
+"VE": {
+"name": "Venezuela",
+"code": "VE",
+"emoji": "🇻🇪",
+"iso3": "VEN",
+"capital": "Caracas",
+"phone_code": "58",
+"currency": "VEF",
+"language": "Tshivenḓa"
+},
+"VG": {
+"name": "British Virgin Islands",
+"code": "VG",
+"emoji": "🇻🇬",
+"iso3": "VGB",
+"capital": "Road Town",
+"phone_code": "+1-284",
+"currency": "USD",
+"language": ""
+},
+"VI": {
+"name": "U.S. Virgin Islands",
+"code": "VI",
+"emoji": "🇻🇮",
+"iso3": "VIR",
+"capital": "Charlotte Amalie",
+"phone_code": "+1-340",
+"currency": "USD",
+"language": "Tiếng Việt"
+},
+"VN": {
+"name": "Vietnam",
+"code": "VN",
+"emoji": "🇻🇳",
+"iso3": "VNM",
+"capital": "Hanoi",
+"phone_code": "84",
+"currency": "VND",
+"language": ""
+},
+"VU": {
+"name": "Vanuatu",
+"code": "VU",
+"emoji": "🇻🇺",
+"iso3": "VUT",
+"capital": "Port Vila",
+"phone_code": "678",
+"currency": "VUV",
+"language": ""
+},
+"WF": {
+"name": "Wallis & Futuna",
+"code": "WF",
+"emoji": "🇼🇫",
+"iso3": "WLF",
+"capital": "Mata Utu",
+"phone_code": "681",
+"currency": "XPF",
+"language": ""
+},
+"WS": {
+"name": "Samoa",
+"code": "WS",
+"emoji": "🇼🇸",
+"iso3": "WSM",
+"capital": "Apia",
+"phone_code": "685",
+"currency": "WST",
+"language": ""
+},
+"XK": {
+"name": "Kosovo",
+"code": "XK",
+"emoji": "🇽🇰",
+"iso3": "XKX",
+"capital": "Pristina",
+"phone_code": "",
+"currency": "EUR",
+"language": ""
+},
+"YE": {
+"name": "Yemen",
+"code": "YE",
+"emoji": "🇾🇪",
+"iso3": "YEM",
+"capital": "Sanaa",
+"phone_code": "967",
+"currency": "YER",
+"language": ""
+},
+"YT": {
+"name": "Mayotte",
+"code": "YT",
+"emoji": "🇾🇹",
+"iso3": "MYT",
+"capital": "Mamoudzou",
+"phone_code": "262",
+"currency": "EUR",
+"language": ""
+},
+"ZA": {
+"name": "South Africa",
+"code": "ZA",
+"emoji": "🇿🇦",
+"iso3": "ZAF",
+"capital": "Pretoria",
+"phone_code": "27",
+"currency": "ZAR",
+"language": "Saɯ cueŋƅ, Saw cuengh"
+},
+"ZM": {
+"name": "Zambia",
+"code": "ZM",
+"emoji": "🇿🇲",
+"iso3": "ZMB",
+"capital": "Lusaka",
+"phone_code": "260",
+"currency": "ZMK",
+"language": ""
+},
+"ZW": {
+"name": "Zimbabwe",
+"code": "ZW",
+"emoji": "🇿🇼",
+"iso3": "ZWE",
+"capital": "Harare",
+"phone_code": "263",
+"currency": "ZWL",
+"language": ""
+},
+"ENGLAND": {
+"name": "England",
+"code": "ENGLAND",
+"emoji": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+"iso3": "",
+"capital": "",
+"phone_code": "",
+"currency": "",
+"language": ""
+},
+"SCOTLAND": {
+"name": "Scotland",
+"code": "SCOTLAND",
+"emoji": "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
+"iso3": "",
+"capital": "",
+"phone_code": "",
+"currency": "",
+"language": ""
+},
+"WALES": {
+"name": "Wales",
+"code": "WALES",
+"emoji": "🏴󠁧󠁢󠁷󠁬󠁳󠁿",
+"iso3": "",
+"capital": "",
+"phone_code": "",
+"currency": "",
+"language": ""
+}
+}

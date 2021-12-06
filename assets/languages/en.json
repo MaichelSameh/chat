@@ -1,5 +1,13 @@
 {
     "welcome": "What's up",
     "welcome_text": "Let's talk with your friends and family wherever and whenever",
-    "continue_with_phone": "Continue with phone"
+    "continue_with_phone": "Continue with phone",
+    "enter_your_phone": "Enter your phone number",
+    "get_phone_credentials": "Please confirm your region and enter your phone number.",
+    "continue": "Continue",
+    "enter_code": "Enter code",
+    "enter_code_text": "We’ve sent the code via SMS to",
+    "did_not_get_code": "Didn’t get the code?",
+    "resend_code": "Resend code",
+    "phone_number_required": "Phone number is required"
 }

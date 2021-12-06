@@ -41,7 +41,7 @@ class CustomElevatedButton extends StatelessWidget {
                   ),
             color: color ?? MyPalette.secondary_color,
             borderRadius:
-                BorderRadius.circular(borderRadius ?? _size.width(10)),
+                BorderRadius.circular(borderRadius ?? _size.width(50)),
           ),
           alignment: Alignment.center,
           child: child),

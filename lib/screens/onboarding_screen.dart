@@ -6,6 +6,7 @@ import 'package:get/get.dart';
 import '../controllers/localization_controller.dart';
 import '../models/size.dart';
 import '../widgets/custom_button.dart';
+import 'phone_verification_screen.dart';
 
 class OnboardingScreen extends StatelessWidget {
   // ignore: constant_identifier_names
@@ -37,6 +38,10 @@ class OnboardingScreen extends StatelessWidget {
             ),
             SizedBox(height: _size.height(152)),
             CustomElevatedButton(
+              onTap: () {
+                Navigator.of(context)
+                    .pushReplacementNamed(PhoneVerificationScreen.route_name);
+              },
               width: _size.width(366),
               child: Text(
                 Get.find<AppLocalizationController>()

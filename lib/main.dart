@@ -1,3 +1,4 @@
+import 'package:chat_app/screens/code_verification_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
@@ -38,6 +39,12 @@ class MyApp extends StatelessWidget {
           routes: {
             OnboardingScreen.route_name: (_) =>
                 const OnboardingScreen(key: Key(OnboardingScreen.route_name)),
+            PhoneVerificationScreen.route_name: (_) =>
+                const PhoneVerificationScreen(
+                    key: Key(PhoneVerificationScreen.route_name)),
+            CodeVerificationScreen.route_name: (_) =>
+                const CodeVerificationScreen(
+                    key: Key(CodeVerificationScreen.route_name)),
           },
           theme: ThemeData(
             fontFamily: "sf-ui-display",

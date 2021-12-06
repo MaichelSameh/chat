@@ -96,10 +96,11 @@ class CustomTextField extends StatelessWidget {
           color: Colors.transparent,
           child: Container(
             width: _width,
-            height: _height ?? 72,
+            height: _height ?? 60,
             decoration: BoxDecoration(
               borderRadius: _border ?? BorderRadius.circular(_size.width(10)),
-              color: MyPalette.secondary_color,
+              color: MyPalette.primary_color,
+              border: Border.all(color: MyPalette.secondary_color),
             ),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
