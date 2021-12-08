@@ -4,7 +4,7 @@ import 'package:get/get.dart';
 
 import '../controllers/localization_controller.dart';
 import '../models/size.dart';
-import '../services/auth_services.dart';
+import '../controllers/auth_controller.dart';
 
 class CodeVerificationScreen extends StatefulWidget {
   const CodeVerificationScreen({Key? key}) : super(key: key);
@@ -17,7 +17,6 @@ class CodeVerificationScreen extends StatefulWidget {
 }
 
 class _CodeVerificationScreenState extends State<CodeVerificationScreen> {
-  AuthServices authServices = AuthServices();
   final TextEditingController codeController = TextEditingController();
 
   @override
@@ -60,7 +59,7 @@ class _CodeVerificationScreenState extends State<CodeVerificationScreen> {
               onChanged: (value) {
                 if (value.length >= 6) {
                   FocusScope.of(context).unfocus();
-                  authServices.verifyPhone(codeController.text);
+                  Get.find<AuthController>().verifyPhone(codeController.text);
                 }
               },
             ),
@@ -102,7 +101,7 @@ class _CodeVerificationScreenState extends State<CodeVerificationScreen> {
               Get.find<AppLocalizationController>()
                       .getTranslatedValue("enter_code_text") +
                   " " +
-                  authServices.phoneNumber +
+                  Get.find<AuthController>().phoneNumber +
                   ".",
               style: Theme.of(context).textTheme.bodyText1,
               textAlign: TextAlign.center,
@@ -128,7 +127,7 @@ class _CodeVerificationScreenState extends State<CodeVerificationScreen> {
                 ),
                 GestureDetector(
                   onTap: () {
-                    authServices.resendCode();
+                    Get.find<AuthController>().resendCode();
                   },
                   child: Text(
                     Get.find<AppLocalizationController>()

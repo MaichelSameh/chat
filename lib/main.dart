@@ -1,4 +1,4 @@
-import 'package:chat_app/screens/code_verification_screen.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
@@ -12,7 +12,6 @@ void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
   Get.put<AppLocalizationController>(AppLocalizationController.empty());
-  Get.put<LoginController>(LoginController());
   Get.put<UserController>(UserController());
 
   await Firebase.initializeApp();
@@ -35,7 +34,9 @@ class MyApp extends StatelessWidget {
             GlobalCupertinoLocalizations.delegate,
           ],
           supportedLocales: localization.locales,
-          initialRoute: OnboardingScreen.route_name,
+          initialRoute: FirebaseAuth.instance.currentUser == null
+              ? OnboardingScreen.route_name
+              : HomeScreen.route_name,
           routes: {
             OnboardingScreen.route_name: (_) =>
                 const OnboardingScreen(key: Key(OnboardingScreen.route_name)),
@@ -45,6 +46,8 @@ class MyApp extends StatelessWidget {
             CodeVerificationScreen.route_name: (_) =>
                 const CodeVerificationScreen(
                     key: Key(CodeVerificationScreen.route_name)),
+            HomeScreen.route_name: (_) =>
+                const HomeScreen(key: Key(HomeScreen.route_name)),
           },
           theme: ThemeData(
             fontFamily: "sf-ui-display",

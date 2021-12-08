@@ -1,14 +1,15 @@
 import 'dart:convert';
 
+import 'package:get/get.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/services.dart';
 
 import '../models/country_info.dart';
 
-class AuthServices {
-  static String _phoneNumber = "";
-  static int? _resendToken;
-  static String _verificationID = "";
+class AuthController extends GetxController {
+  String _phoneNumber = "";
+  int? _resendToken;
+  String _verificationID = "";
 
   String get phoneNumber => _phoneNumber;
 
@@ -42,13 +43,13 @@ class AuthServices {
   }
 
   Future<bool> verifyPhone(String code) async {
-    print(_verificationID);
     // Create a PhoneAuthCredential with the code
     PhoneAuthCredential credential = PhoneAuthProvider.credential(
         verificationId: _verificationID, smsCode: code);
-
     // Sign the user in (or link) with the credential
-    await FirebaseAuth.instance.signInWithCredential(credential);
+    UserCredential user =
+        await FirebaseAuth.instance.signInWithCredential(credential);
+
     return true;
   }
 

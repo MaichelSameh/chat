@@ -1,71 +1,72 @@
-enum Gender { male, female }
-
 class UserInfo {
   UserInfo({
-    required String name,
-    required Gender gender,
-    required String email,
+    required String bio,
+    required String coverURL,
+    required List<String> fcm,
     required String id,
-    required int grade,
-    required String imageURL,
+    required String profileURL,
+    required String name,
+    required String phoneNumber,
   }) {
-    _email = email;
-    _gender = gender;
-    _grade = grade;
+    _bio = bio;
+    _coverURL = coverURL;
+    _fcm = fcm;
     _id = id;
+    _profileURL = profileURL;
     _name = name;
-    _imageURL = imageURL;
+    _phoneNumber = phoneNumber;
   }
 
   UserInfo.empty() {
-    _email = "maichelsameh622@gmail.com";
-    _gender = Gender.male;
-    _grade = 17;
-    _id = "0";
-    _name = "Maichel Sameh";
-    _imageURL = "";
+    _bio = "";
+    _coverURL = "";
+    _fcm = [];
+    _id = "";
+    _profileURL = "";
+    _name = "";
+    _phoneNumber = "";
   }
 
-  UserInfo.fromFirebase(Map<String, dynamic> json, String id) {
-    _email = json["email"];
-    _gender = json["gender"] == "male" ? Gender.male : Gender.female;
-    _grade = int.parse(json["grade"].toString());
+  UserInfo.fromFirebase(Map<String, dynamic> data, String id) {
+    _bio = data["bio"];
+    _fcm = data["fcm"] ?? [];
     _id = id;
-    _name = json["name"];
-    _imageURL = json["image_url"] ?? "";
+    _profileURL = data["profile_url"];
+    _name = data["name"];
+    _phoneNumber = data["phone"];
+    _coverURL = data["cover_url"];
   }
 
-  late String _email;
-  late Gender _gender;
-  late int _grade;
+  late String _bio;
+  late String _coverURL;
+  late List<String> _fcm;
   late String _id;
-  late String _imageURL;
   late String _name;
+  late String _phoneNumber;
+  late String _profileURL;
 
-  @override
-  String toString() {
-    return 'UserInfo(_email: $_email, _name: $_name, _id: $_id, _imageURL: $_imageURL, _grade: $_grade, _gender: $_gender)';
-  }
+  String get bio => _bio;
 
-  String get email => _email;
+  String get coverURL => _coverURL;
 
-  String get name => _name;
+  List<String> get fcm => _fcm;
 
   String get id => _id;
 
-  int get grade => _grade;
+  String get profileURL => _profileURL;
 
-  Gender get gender => _gender;
+  String get name => _name;
 
-  String get imageURL => _imageURL;
+  String get phoneNumber => _phoneNumber;
 
-  Map<String, dynamic> toJSON() {
+  Map<String, dynamic> toMap() {
     return {
-      "email": email,
-      "gender": gender == Gender.male ? "male" : "female",
-      "grade": grade,
-      "image_url": imageURL,
+      "bio": bio,
+      "cover_url": coverURL,
+      "fcm": fcm,
+      "profile_url": profileURL,
       "name": name,
+      "phone": phoneNumber,
     };
   }
 }

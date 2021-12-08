@@ -6,7 +6,7 @@ import '../config/palette.dart';
 import '../controllers/localization_controller.dart';
 import '../models/size.dart';
 import '../widgets/widgets.dart';
-import '../services/auth_services.dart';
+import '../controllers/auth_controller.dart';
 import 'code_verification_screen.dart';
 
 class PhoneVerificationScreen extends StatefulWidget {
@@ -32,7 +32,7 @@ class _PhoneVerificationScreenState extends State<PhoneVerificationScreen> {
   }
 
   Future<void> initCountries() async {
-    countries = await AuthServices().getCountries();
+    countries = await Get.find<AuthController>().getCountries();
     countryCode = countries.firstWhere((country) => country.code == "US").code;
     setState(() {});
   }
@@ -142,7 +142,7 @@ class _PhoneVerificationScreenState extends State<PhoneVerificationScreen> {
                 if (phoneController.text.isNotEmpty) {
                   showDialog(
                       context: context, builder: (_) => const PreLoader());
-                  await AuthServices()
+                  await Get.find<AuthController>()
                       .phoneAuth(
                     countries
                         .firstWhere((country) => country.code == countryCode)
