@@ -5,6 +5,7 @@ import 'package:get/get.dart';
 import '../controllers/localization_controller.dart';
 import '../models/size.dart';
 import '../controllers/auth_controller.dart';
+import 'create_profile_screen.dart';
 
 class CodeVerificationScreen extends StatefulWidget {
   const CodeVerificationScreen({Key? key}) : super(key: key);
@@ -56,10 +57,30 @@ class _CodeVerificationScreenState extends State<CodeVerificationScreen> {
               maxLines: null,
               minLines: null,
               expands: true,
-              onChanged: (value) {
+              onChanged: (value) async {
                 if (value.length >= 6) {
                   FocusScope.of(context).unfocus();
-                  Get.find<AuthController>().verifyPhone(codeController.text);
+                  bool valid = await Get.find<AuthController>()
+                      .verifyPhone(codeController.text)
+                      .catchError(
+                    (error) {
+                      ScaffoldMessenger.of(context).showSnackBar(
+                        SnackBar(
+                          content: Text(
+                            error.toString(),
+                            style: Theme.of(context)
+                                .textTheme
+                                .bodyText1!
+                                .copyWith(color: Colors.white),
+                          ),
+                        ),
+                      );
+                    },
+                  );
+                  if (valid) {
+                    Navigator.of(context)
+                        .pushReplacementNamed(CreateProfileScreen.route_name);
+                  }
                 }
               },
             ),
@@ -127,6 +148,7 @@ class _CodeVerificationScreenState extends State<CodeVerificationScreen> {
                 ),
                 GestureDetector(
                   onTap: () {
+                    codeController.clear();
                     Get.find<AuthController>().resendCode();
                   },
                   child: Text(

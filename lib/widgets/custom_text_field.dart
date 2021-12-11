@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 
@@ -35,6 +34,10 @@ class CustomTextField extends StatelessWidget {
 
   late final TextInputType _keyboardType;
 
+  late final Color? _color;
+
+  late final TextAlign? _textAlign;
+
   CustomTextField({
     Key? key,
     double? width,
@@ -55,9 +58,12 @@ class CustomTextField extends StatelessWidget {
     TextStyle? hintStyle,
     void Function(String)? onChange,
     TextInputType keyboardType = TextInputType.text,
+    Color? color,
+    TextAlign? textAlign,
   }) : super(key: key) {
     _border = border;
     _controller = controller;
+    _color = color;
     _expands = expands;
     _hintKey = hintKey;
     _headerKey = headerKey;
@@ -74,6 +80,7 @@ class CustomTextField extends StatelessWidget {
     _width = width;
     _onChange = onChange;
     _keyboardType = keyboardType;
+    _textAlign = textAlign;
   }
 
   @override
@@ -100,7 +107,7 @@ class CustomTextField extends StatelessWidget {
             decoration: BoxDecoration(
               borderRadius: _border ?? BorderRadius.circular(_size.width(10)),
               color: MyPalette.primary_color,
-              border: Border.all(color: MyPalette.secondary_color),
+              border: Border.all(color: _color ?? MyPalette.secondary_color),
             ),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -125,6 +132,7 @@ class CustomTextField extends StatelessWidget {
                       minLines: _expands ? null : _minLines,
                       controller: _controller,
                       textAlignVertical: TextAlignVertical.center,
+                      textAlign: _textAlign ?? TextAlign.start,
                       textDirection:
                           Get.find<AppLocalizationController>().isRTLanguage
                               ? TextDirection.rtl

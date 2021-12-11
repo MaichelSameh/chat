@@ -1,10 +1,9 @@
-import 'package:chat_app/models/models.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import '../config/palette.dart';
 import '../controllers/localization_controller.dart';
-import '../models/size.dart';
+import '../models/models.dart';
 import '../widgets/widgets.dart';
 import '../controllers/auth_controller.dart';
 import 'code_verification_screen.dart';
@@ -33,7 +32,7 @@ class _PhoneVerificationScreenState extends State<PhoneVerificationScreen> {
 
   Future<void> initCountries() async {
     countries = await Get.find<AuthController>().getCountries();
-    countryCode = countries.firstWhere((country) => country.code == "US").code;
+    countryCode = countries.firstWhere((country) => country.code == "EG").code;
     setState(() {});
   }
 
@@ -165,8 +164,13 @@ class _PhoneVerificationScreenState extends State<PhoneVerificationScreen> {
                       Navigator.pop(context);
                     },
                   );
-                  Navigator.of(context)
-                      .pushReplacementNamed(CodeVerificationScreen.route_name);
+                  Navigator.pop(context);
+                  Get.find<AuthController>().addListener(() {
+                    if (Get.find<AuthController>().smsReceived) {
+                      Navigator.of(context).pushReplacementNamed(
+                          CodeVerificationScreen.route_name);
+                    }
+                  });
                 } else {
                   ScaffoldMessenger.of(context).showSnackBar(
                     SnackBar(

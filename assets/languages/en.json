@@ -6,8 +6,10 @@
     "get_phone_credentials": "Please confirm your region and enter your phone number.",
     "continue": "Continue",
     "enter_code": "Enter code",
-    "enter_code_text": "We’ve sent the code via SMS to",
-    "did_not_get_code": "Didn’t get the code?",
+    "enter_code_text": "We've sent the code via SMS to",
+    "did_not_get_code": "Didn't get the code?",
     "resend_code": "Resend code",
-    "phone_number_required": "Phone number is required"
+    "phone_number_required": "Phone number is required",
+    "create_profile_header": "Let's setup your profile",
+    "create_profile": "Create profile"
 }

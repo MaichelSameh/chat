@@ -1,5 +1,5 @@
-class UserInfo {
-  UserInfo({
+class MyUserInfo {
+  MyUserInfo({
     required String bio,
     required String coverURL,
     required List<String> fcm,
@@ -17,19 +17,26 @@ class UserInfo {
     _phoneNumber = phoneNumber;
   }
 
-  UserInfo.empty() {
-    _bio = "";
+  MyUserInfo.empty() {
+    _bio = "Hi there I am using app";
     _coverURL = "";
     _fcm = [];
     _id = "";
-    _profileURL = "";
+    _profileURL =
+        "https://firebasestorage.googleapis.com/v0/b/chat-app-81826.appspot.com/o/users%2Funknown-person-icon-27.jpg?alt=media&token=bfa3dab1-5605-43c0-a73a-979b25a4862b";
     _name = "";
-    _phoneNumber = "";
+    _phoneNumber =
+        "https://firebasestorage.googleapis.com/v0/b/chat-app-81826.appspot.com/o/users%2Funknown-person-icon-27.jpg?alt=media&token=bfa3dab1-5605-43c0-a73a-979b25a4862b";
   }
 
-  UserInfo.fromFirebase(Map<String, dynamic> data, String id) {
+  MyUserInfo.fromFirebase(Map<String, dynamic> data, String id) {
+    List<String> fcm = [];
+    List<dynamic> list = data["fcm"] ?? [];
+    for (var temp in list) {
+      fcm.add(temp.toString());
+    }
     _bio = data["bio"];
-    _fcm = data["fcm"] ?? [];
+    _fcm = fcm;
     _id = id;
     _profileURL = data["profile_url"];
     _name = data["name"];
@@ -68,5 +75,25 @@ class UserInfo {
       "name": name,
       "phone": phoneNumber,
     };
+  }
+
+  MyUserInfo copyWith({
+    String? bio,
+    String? coverURL,
+    String? profileURL,
+    String? name,
+    String? phoneNumber,
+    String? id,
+    List<String>? fcm,
+  }) {
+    return MyUserInfo(
+      bio: bio ?? this.bio,
+      coverURL: coverURL ?? this.coverURL,
+      fcm: fcm ?? this.fcm,
+      id: id ?? this.id,
+      profileURL: profileURL ?? this.profileURL,
+      name: name ?? this.name,
+      phoneNumber: phoneNumber ?? this.phoneNumber,
+    );
   }
 }

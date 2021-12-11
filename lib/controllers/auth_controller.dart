@@ -1,15 +1,21 @@
 import 'dart:convert';
 
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:get/get.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/services.dart';
 
-import '../models/country_info.dart';
+import '../models/models.dart';
+import 'user_controller.dart';
 
 class AuthController extends GetxController {
   String _phoneNumber = "";
   int? _resendToken;
   String _verificationID = "";
+  bool _smsReceived = false;
+
+  bool get smsReceived => _smsReceived;
 
   String get phoneNumber => _phoneNumber;
 
@@ -49,11 +55,36 @@ class AuthController extends GetxController {
     // Sign the user in (or link) with the credential
     UserCredential user =
         await FirebaseAuth.instance.signInWithCredential(credential);
+    Get.find<UserController>().setCurrentUser(
+      Get.find<UserController>().currentUser.copyWith(
+            phoneNumber: user.user!.phoneNumber,
+            id: user.user!.uid,
+          ),
+    );
+    DocumentSnapshot<Map<String, dynamic>> response = await FirebaseFirestore
+        .instance
+        .collection("users")
+        .doc(Get.find<UserController>().currentUser.id)
+        .get();
 
+    if (response.data() != null) {
+      Get.find<UserController>().setCurrentUser(
+          MyUserInfo.fromFirebase(response.data()!, response.id));
+    }
+
+    String fcm = await FirebaseMessaging.instance.getToken() ?? "Not available";
+    Get.find<UserController>().addNewFCM(fcm);
+    FirebaseFirestore.instance
+        .collection("users")
+        .doc(Get.find<UserController>().currentUser.id)
+        .set(
+          Get.find<UserController>().currentUser.toMap(),
+          SetOptions(merge: true),
+        );
     return true;
   }
 
-  Future<bool> phoneAuth(String phoneCode, String phoneNumber) async {
+  Future<void> phoneAuth(String phoneCode, String phoneNumber) async {
     _phoneNumber = phoneCode + phoneNumber;
     try {
       final FirebaseAuth auth = FirebaseAuth.instance;
@@ -70,10 +101,11 @@ class AuthController extends GetxController {
         codeSent: (String verificationId, int? resendToken) async {
           _verificationID = verificationId;
           _resendToken = resendToken;
+          _smsReceived = true;
+          update();
         },
         codeAutoRetrievalTimeout: (String verificationId) {},
       );
-      return true;
     } catch (error) {
       _echo(variableName: "error", functionName: "getCountries", data: error);
       rethrow;

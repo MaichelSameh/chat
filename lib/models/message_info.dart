@@ -59,6 +59,8 @@ class MessageInfo {
 
   String get senderId => _senderId;
 
+  ReceiverType get receiverType => _receiverType;
+
   Map<String, dynamic> toMap() {
     return {
       "created_at": DateFormat("yyyy-MM-dd hh:mm:ss").format(createdAt),
