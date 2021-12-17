@@ -9,19 +9,9 @@ import 'package:firebase_core/firebase_core.dart';
 import 'config/palette.dart';
 import 'controllers/controllers.dart';
 import 'screens/screens.dart';
+import 'services/contact_services.dart';
 
-Future<void> handleBackgroundNotification(RemoteMessage message) async {
-  // final RemoteNotification? notification = message.notification;
-  // SharedPreferences pref = await SharedPreferences.getInstance();
-  // if (notification!.body!.isCaseInsensitiveContains("New") &&
-  //     notification.body!.isCaseInsensitiveContains("added")) {
-  //   int value = pref.getInt("manager_notification_count") ?? 0;
-  //   pref.setInt("manager_notification_count", ++value);
-  // } else {
-  //   int value = pref.getInt("employee_notification_count") ?? 0;
-  //   pref.setInt("employee_notification_count", value);
-  // }
-}
+Future<void> handleBackgroundNotification(RemoteMessage message) async {}
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -42,6 +32,17 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    ContactServices().canGetContacts().then((value) {
+      if (value) {
+        ContactServices().getContacts();
+      } else {
+        ContactServices().getContactsPermission().then((value) {
+          if (value) {
+            ContactServices().getContacts();
+          }
+        });
+      }
+    });
     return GetBuilder<AppLocalizationController>(
       builder: (localization) {
         return MaterialApp(
@@ -69,8 +70,6 @@ class MyApp extends StatelessWidget {
                 const HomeScreen(key: Key(HomeScreen.route_name)),
             CreateProfileScreen.route_name: (_) => const CreateProfileScreen(
                 key: Key(CreateProfileScreen.route_name)),
-            ContactsScreen.route_name: (_) =>
-                const ContactsScreen(key: Key(ContactsScreen.route_name)),
           },
           theme: ThemeData(
             fontFamily: "sf-ui-display",

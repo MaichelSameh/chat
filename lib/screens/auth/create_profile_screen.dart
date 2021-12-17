@@ -6,10 +6,10 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 import 'package:image_picker/image_picker.dart';
 
-import '../controllers/controllers.dart';
-import '../models/size.dart';
-import '../widgets/widgets.dart';
-import 'home_screen.dart';
+import '../../controllers/controllers.dart';
+import '../../models/size.dart';
+import '../../widgets/widgets.dart';
+import '../home/home_screen.dart';
 
 class CreateProfileScreen extends StatefulWidget {
   const CreateProfileScreen({Key? key}) : super(key: key);

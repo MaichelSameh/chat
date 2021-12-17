@@ -11,8 +11,6 @@ import '../controllers/user_controller.dart';
 class ContactsDBServices {
   // ignore: constant_identifier_names
   static const String _contacts_table_name = "contacts_table";
-  // ignore: constant_identifier_names
-  static const String _fcm_table_name = "fcm_table";
 
   static Database? _db;
 
@@ -30,32 +28,29 @@ class ContactsDBServices {
       return _db!;
     } else {
       Directory dir = await path_provider.getApplicationDocumentsDirectory();
-      _db = await openDatabase(
-        dir.path + _contacts_table_name,
-        version: 1,
-        onCreate: (db, version) {
-          db.execute('''
+      _db = await openDatabase(dir.path + _contacts_table_name, version: 1,
+          onCreate: (db, version) async {
+        await createDatabase(db);
+      });
+
+      return _db!;
+    }
+  }
+
+  Future<void> createDatabase(Database db) async {
+    await db.execute('''
         CREATE TABLE $_contacts_table_name (
           id INTEGER NOT NULL PRIMARY KEY,
           phone TEXT NOT NULL,
           name TEXT NOT NULL,
           firebase_id TEXT
         );
-        CREATE TABLE _fcm_table_name(
-          id INTEGER NOT NULL PRIMARY KEY,
-          fcm TEXT NOT NULL,
-          user_id INTEGER NOT NULL,
-          FOREIGN KEY (user_id) REFERENCES $_contacts_table_name(id)
-        );
         ''');
-          SharedPreferences.getInstance()
-              .then((pref) => pref.setInt(_contacts_table_name, 1));
-          SharedPreferences.getInstance()
-              .then((pref) => pref.setInt(_fcm_table_name, 1));
-        },
-      );
-      return _db!;
-    }
+    SharedPreferences.getInstance().then((pref) async {
+      if (!pref.containsKey(_contacts_table_name)) {
+        await pref.setInt(_contacts_table_name, 1);
+      }
+    });
   }
 
   Future<bool> insertContact(ContactInfo contact) async {
@@ -68,7 +63,7 @@ class ContactsDBServices {
         _contacts_table_name,
         {
           "id": pref.getInt(_contacts_table_name) ?? 1,
-          "phone": contact.toMap()["phone"].first,
+          "phone": "${contact.toMap()["phone"].first}",
           "name": contact.toMap()["name"],
           "firebase_id": contact.toMap()["firebase_id"] ??
                   (user ?? MyUserInfo.empty()).id.isEmpty
@@ -76,17 +71,7 @@ class ContactsDBServices {
               : (user ?? MyUserInfo.empty()).id,
         },
       );
-      pref.setInt(_contacts_table_name, id + 1);
-      if (user != null) {
-        for (String fcm in user.fcm) {
-          id = await db.insert(_fcm_table_name, {
-            "user_id": id,
-            "fcm": fcm,
-            "id": pref.getInt(_fcm_table_name) ?? 1
-          });
-          pref.setInt(_fcm_table_name, id + 1);
-        }
-      }
+      await pref.setInt(_contacts_table_name, id + 1);
       return true;
     } catch (error) {
       _echo(variableName: "error", functionName: "insertContact", data: error);
@@ -98,10 +83,9 @@ class ContactsDBServices {
     try {
       Database db = await _database();
       List<Map<String, dynamic>> list = await db.query(_contacts_table_name,
-          where: "phone = ? OR name = ?",
-          whereArgs: [contact.phoneNumbers, contact.name]);
+          where: "phone = '${contact.phoneNumbers.first}'");
       if (list.isEmpty) {
-        insertContact(contact);
+        await insertContact(contact);
       }
       return true;
     } catch (error) {
@@ -147,13 +131,29 @@ class ContactsDBServices {
     List<ContactInfo> contacts = [];
     try {
       Database db = await _database();
-      List<Map<String, dynamic>> list = await db.query(_contacts_table_name);
+      List<Map<String, dynamic>> list = await db.query(
+        _contacts_table_name,
+        where: "firebase_id IS NOT NULL",
+        orderBy: "name ASC",
+      );
       for (Map<String, dynamic> contact in list) {
         contacts.add(ContactInfo.fromLocalDB(contact));
       }
     } catch (error) {
-      _echo(variableName: "error", functionName: "updateContact", data: error);
+      _echo(variableName: "error", functionName: "getContacts", data: error);
     }
     return contacts;
+  }
+
+  Future<void> clearDB() async {
+    try {
+      Database db = await _database();
+      await db.execute('''DROP TABLE $_contacts_table_name''');
+      SharedPreferences pref = await SharedPreferences.getInstance();
+      await pref.setInt(_contacts_table_name, 1);
+      await createDatabase(db);
+    } catch (error) {
+      _echo(variableName: "error", functionName: "clearDB", data: error);
+    }
   }
 }

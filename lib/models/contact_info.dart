@@ -18,7 +18,7 @@ class ContactInfo {
   }
 
   ContactInfo.fromLocalDB(Map<String, dynamic> data) {
-    _phoneNumbers = data["phone"];
+    _phoneNumbers = [data["phone"]];
     _name = data["name"];
     _firebaseId = data["firebase_id"];
   }

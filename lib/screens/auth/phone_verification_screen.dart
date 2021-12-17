@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../config/palette.dart';
-import '../controllers/localization_controller.dart';
-import '../models/models.dart';
-import '../widgets/widgets.dart';
-import '../controllers/auth_controller.dart';
+import '../../config/palette.dart';
+import '../../controllers/localization_controller.dart';
+import '../../models/models.dart';
+import '../../widgets/widgets.dart';
+import '../../controllers/auth_controller.dart';
 import 'code_verification_screen.dart';
 
 class PhoneVerificationScreen extends StatefulWidget {

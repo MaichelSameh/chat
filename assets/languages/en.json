@@ -11,5 +11,9 @@
     "resend_code": "Resend code",
     "phone_number_required": "Phone number is required",
     "create_profile_header": "Let's setup your profile",
-    "create_profile": "Create profile"
+    "create_profile": "Create profile",
+    "messages": "Messages",
+    "calls": "Calls",
+    "contacts": "Contacts",
+    "profile": "Profile"
 }

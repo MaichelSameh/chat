@@ -21,8 +21,7 @@ class Size {
   }
 
   double screenHeight() {
-    _screenHeight ??= MediaQuery.of(_context).size.height -
-        MediaQuery.of(_context).padding.top;
+    _screenHeight ??= MediaQuery.of(_context).size.height;
     return _screenHeight ?? 1;
   }
 

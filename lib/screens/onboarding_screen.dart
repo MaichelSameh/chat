@@ -6,7 +6,7 @@ import 'package:get/get.dart';
 import '../controllers/localization_controller.dart';
 import '../models/size.dart';
 import '../widgets/custom_button.dart';
-import 'phone_verification_screen.dart';
+import 'auth/phone_verification_screen.dart';
 
 class OnboardingScreen extends StatelessWidget {
   // ignore: constant_identifier_names

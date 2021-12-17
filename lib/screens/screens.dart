@@ -1,6 +1,9 @@
 export 'onboarding_screen.dart';
-export 'phone_verification_screen.dart';
-export 'code_verification_screen.dart';
-export 'home_screen.dart';
-export 'create_profile_screen.dart';
-export 'contacts_screen.dart';
+export 'auth/phone_verification_screen.dart';
+export 'auth/code_verification_screen.dart';
+export 'home/home_screen.dart';
+export 'auth/create_profile_screen.dart';
+export 'home/contacts_screen.dart';
+export 'home/calls_screen.dart';
+export 'home/messages_screen.dart';
+export 'home/profile_screen.dart';
