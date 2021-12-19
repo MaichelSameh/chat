@@ -57,18 +57,13 @@ class ContactsDBServices {
     try {
       Database db = await _database();
       SharedPreferences pref = await SharedPreferences.getInstance();
-      MyUserInfo? user =
-          await UserController().searchUserByPhone(contact.phoneNumbers.first);
       int id = await db.insert(
         _contacts_table_name,
         {
           "id": pref.getInt(_contacts_table_name) ?? 1,
           "phone": "${contact.toMap()["phone"].first}",
           "name": contact.toMap()["name"],
-          "firebase_id": contact.toMap()["firebase_id"] ??
-                  (user ?? MyUserInfo.empty()).id.isEmpty
-              ? null
-              : (user ?? MyUserInfo.empty()).id,
+          "firebase_id": contact.toMap()["firebase_id"],
         },
       );
       await pref.setInt(_contacts_table_name, id + 1);
@@ -82,14 +77,23 @@ class ContactsDBServices {
   Future<bool> insertIfAbsent(ContactInfo contact) async {
     try {
       Database db = await _database();
-      List<Map<String, dynamic>> list = await db.query(_contacts_table_name,
-          where: "phone = '${contact.phoneNumbers.first}'");
-      if (list.isEmpty) {
-        await insertContact(contact);
+
+      MyUserInfo? user =
+          await UserController().searchUserByPhone(contact.phoneNumbers.first);
+      if (user != null) {
+        contact = contact.copyWith(firebaseId: user.id);
+        List<Map<String, dynamic>> list = await db.query(_contacts_table_name,
+            where: "phone = '${contact.phoneNumbers.first}'");
+
+        if (list.isEmpty) {
+          await insertContact(contact);
+        } else if (contact != ContactInfo.fromLocalDB(list.first)) {
+          updateContact(list.first["id"], contact);
+        }
       }
       return true;
     } catch (error) {
-      _echo(variableName: "error", functionName: "insertContact", data: error);
+      _echo(variableName: "error", functionName: "insertIfAbsent", data: error);
       return false;
     }
   }
@@ -114,7 +118,7 @@ class ContactsDBServices {
         _contacts_table_name,
         {
           "id": contacts.first["id"],
-          "phone": contact.toMap()["phone"],
+          "phone": contact.toMap()["phone"].first,
           "name": contact.toMap()["name"],
           "firebase_id": contact.toMap()["firebase_id"],
         },
@@ -141,6 +145,24 @@ class ContactsDBServices {
       }
     } catch (error) {
       _echo(variableName: "error", functionName: "getContacts", data: error);
+    }
+    return contacts;
+  }
+
+  Future<List<ContactInfo>> searchContacts(String name) async {
+    List<ContactInfo> contacts = [];
+    try {
+      Database db = await _database();
+      List<Map<String, dynamic>> list = await db.query(
+        _contacts_table_name,
+        where: "name = '$name'",
+        orderBy: "name ASC",
+      );
+      for (Map<String, dynamic> contact in list) {
+        contacts.add(ContactInfo.fromLocalDB(contact));
+      }
+    } catch (error) {
+      _echo(variableName: "error", functionName: "searchContacts", data: error);
     }
     return contacts;
   }

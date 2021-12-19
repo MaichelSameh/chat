@@ -34,4 +34,30 @@ class ContactInfo {
   @override
   String toString() =>
       'ContactInfo(name: $name, phone_numbers: $phoneNumbers, firebase_id: $firebaseId)';
+
+  ContactInfo copyWith({
+    String? name,
+    List<String>? phoneNumbers,
+    String? firebaseId,
+  }) {
+    return ContactInfo(
+      name: name ?? this.name,
+      phoneNumbers: phoneNumbers ?? this.phoneNumbers,
+      firebaseId: firebaseId ?? this.firebaseId,
+    );
+  }
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(this, other)) return true;
+
+    return other is ContactInfo &&
+        other._name == _name &&
+        other._phoneNumbers == _phoneNumbers &&
+        other._firebaseId == _firebaseId;
+  }
+
+  @override
+  int get hashCode =>
+      _name.hashCode ^ _phoneNumbers.hashCode ^ _firebaseId.hashCode;
 }

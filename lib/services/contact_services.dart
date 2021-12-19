@@ -1,3 +1,5 @@
+import '../controllers/controllers.dart';
+import 'package:get/get.dart';
 import 'package:permission_handler/permission_handler.dart';
 import 'package:contacts_service/contacts_service.dart';
 
@@ -28,7 +30,17 @@ class ContactServices {
       for (Item phone in contact.phones ?? []) {
         if (phone.value != null &&
             !phones.contains((phone.value ?? "").replaceAll(" ", ""))) {
-          phones.add(phone.value!.replaceAll(" ", ""));
+          String phoneNumber = phone.value!.replaceAll(" ", "");
+          for (int i = 0;
+              i < Get.find<UserController>().currentUser.countryCode.length;
+              i++) {
+            if (phoneNumber.startsWith(
+                Get.find<UserController>().currentUser.countryCode[i])) {
+              phoneNumber = phoneNumber.replaceFirst(
+                  Get.find<UserController>().currentUser.countryCode[i], "");
+            }
+          }
+          phones.add(phoneNumber);
         }
       }
       if (phones.isNotEmpty) {

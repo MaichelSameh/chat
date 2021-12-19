@@ -106,7 +106,6 @@ class CustomTextField extends StatelessWidget {
             height: _height ?? 60,
             decoration: BoxDecoration(
               borderRadius: _border ?? BorderRadius.circular(_size.width(10)),
-              color: MyPalette.primary_color,
               border: Border.all(color: _color ?? MyPalette.secondary_color),
             ),
             child: Row(
@@ -137,6 +136,11 @@ class CustomTextField extends StatelessWidget {
                           Get.find<AppLocalizationController>().isRTLanguage
                               ? TextDirection.rtl
                               : TextDirection.ltr,
+                      cursorColor: (_color ?? MyPalette.secondary_color) ==
+                              Colors.transparent
+                          ? MyPalette.secondary_color.withOpacity(0.7)
+                          : (_color ?? MyPalette.secondary_color)
+                              .withOpacity(0.7),
                       decoration: InputDecoration(
                           hintTextDirection:
                               Get.find<AppLocalizationController>().isRTLanguage

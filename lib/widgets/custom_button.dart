@@ -1,4 +1,4 @@
-import 'package:chat_app/config/palette.dart';
+import '../config/palette.dart';
 import 'package:flutter/material.dart';
 
 import '../models/size.dart';

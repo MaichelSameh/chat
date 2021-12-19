@@ -70,6 +70,8 @@ class MyApp extends StatelessWidget {
                 const HomeScreen(key: Key(HomeScreen.route_name)),
             CreateProfileScreen.route_name: (_) => const CreateProfileScreen(
                 key: Key(CreateProfileScreen.route_name)),
+            PrivateChatScreen.route_name: (_) =>
+                const PrivateChatScreen(key: Key(PrivateChatScreen.route_name)),
           },
           theme: ThemeData(
             fontFamily: "sf-ui-display",

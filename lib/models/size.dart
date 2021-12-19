@@ -17,7 +17,7 @@ class Size {
   }
 
   double get constrainMaxWidth {
-    return _constrain.maxWidth == 1 ? screenHeight() : _constrain.maxWidth;
+    return _constrain.maxWidth == 1 ? screenWidth() : _constrain.maxWidth;
   }
 
   double screenHeight() {

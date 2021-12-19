@@ -62,12 +62,46 @@ class MessageInfo {
   ReceiverType get receiverType => _receiverType;
 
   Map<String, dynamic> toMap() {
+    String receiverType = "";
+    switch (this.receiverType) {
+      case ReceiverType.individual:
+        receiverType = "1";
+        break;
+      case ReceiverType.group:
+        receiverType = "2";
+        break;
+      case ReceiverType.unknown:
+        break;
+    }
     return {
       "created_at": DateFormat("yyyy-MM-dd hh:mm:ss").format(createdAt),
       "media_link": mediaLink,
       "message": message,
       "receiver_id": receiverId,
       "sender_id": senderId,
+      "receiver_type_id": receiverType,
+    };
+  }
+
+  Map<String, String> toMessage() {
+    String receiverType = "";
+    switch (this.receiverType) {
+      case ReceiverType.individual:
+        receiverType = "1";
+        break;
+      case ReceiverType.group:
+        receiverType = "2";
+        break;
+      case ReceiverType.unknown:
+        break;
+    }
+    return {
+      "created_at": DateFormat("yyyy-MM-dd hh:mm:ss").format(createdAt),
+      "media_link": mediaLink,
+      "message": message,
+      "receiver_id": receiverId,
+      "sender_id": senderId,
+      "receiver_type_id": receiverType,
     };
   }
 }

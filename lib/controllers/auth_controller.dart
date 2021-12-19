@@ -14,10 +14,11 @@ class AuthController extends GetxController {
   int? _resendToken;
   String _verificationID = "";
   bool _smsReceived = false;
+  String _countryCode = "";
 
   bool get smsReceived => _smsReceived;
 
-  String get phoneNumber => _phoneNumber;
+  String get phoneNumber => _countryCode + _phoneNumber;
 
   void _echo({
     required String variableName,
@@ -57,8 +58,9 @@ class AuthController extends GetxController {
         await FirebaseAuth.instance.signInWithCredential(credential);
     Get.find<UserController>().setCurrentUser(
       Get.find<UserController>().currentUser.copyWith(
-            phoneNumber: user.user!.phoneNumber,
+            phoneNumber: _phoneNumber,
             id: user.user!.uid,
+            countryCode: _countryCode,
           ),
     );
     DocumentSnapshot<Map<String, dynamic>> response = await FirebaseFirestore
@@ -85,11 +87,17 @@ class AuthController extends GetxController {
   }
 
   Future<void> phoneAuth(String phoneCode, String phoneNumber) async {
-    _phoneNumber = phoneCode + phoneNumber;
+    _countryCode = phoneCode;
+    for (int i = 0; i < phoneCode.length; i++) {
+      if (phoneNumber.startsWith(phoneCode[i])) {
+        phoneNumber = phoneNumber.replaceFirst(phoneCode[i], "");
+      }
+    }
+    _phoneNumber = phoneNumber;
     try {
       final FirebaseAuth auth = FirebaseAuth.instance;
       await auth.verifyPhoneNumber(
-        phoneNumber: _phoneNumber,
+        phoneNumber: _countryCode + _phoneNumber,
         verificationCompleted: (PhoneAuthCredential credential) async {
           await auth.signInWithCredential(credential);
         },

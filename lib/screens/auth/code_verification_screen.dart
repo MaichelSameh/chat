@@ -1,10 +1,10 @@
-import 'package:chat_app/config/palette.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+import '../../config/palette.dart';
+import '../../controllers/auth_controller.dart';
 import '../../controllers/localization_controller.dart';
 import '../../models/size.dart';
-import '../../controllers/auth_controller.dart';
 import 'create_profile_screen.dart';
 
 class CodeVerificationScreen extends StatefulWidget {

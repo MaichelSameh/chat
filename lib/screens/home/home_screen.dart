@@ -24,7 +24,9 @@ class _HomeScreenState extends State<HomeScreen> {
     const ProfileScreen(),
   ];
 
-  PageController pageController = PageController(initialPage: 1);
+  int currentPageNumber = 0;
+
+  PageController pageController = PageController();
   @override
   Widget build(BuildContext context) {
     Size _size = Size(context);
@@ -53,11 +55,13 @@ class _HomeScreenState extends State<HomeScreen> {
               controller: pageController,
               physics: const ClampingScrollPhysics(),
               children: pages,
+              onPageChanged: (page) {
+                currentPageNumber = page;
+                setState(() {});
+              },
             )),
             BottomNavBar(
-              currentPageNumber: pageController.hasClients
-                  ? (pageController.page ?? 0).toInt()
-                  : pageController.initialPage,
+              currentPageNumber: currentPageNumber,
               onChange: (_) {
                 pageController.animateToPage(
                   _,

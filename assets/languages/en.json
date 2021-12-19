@@ -15,5 +15,6 @@
     "messages": "Messages",
     "calls": "Calls",
     "contacts": "Contacts",
-    "profile": "Profile"
+    "profile": "Profile",
+    "type_message": "Type a message"
 }

@@ -27,6 +27,7 @@ class _ContactsScreenState extends State<ContactsScreen> {
   @override
   Widget build(BuildContext context) {
     return ListView(
+      padding: EdgeInsets.zero,
       children: contacts.map<Widget>(
         (contact) {
           return ContactContainer(contact: contact);

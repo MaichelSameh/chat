@@ -7,3 +7,4 @@ export 'home/contacts_screen.dart';
 export 'home/calls_screen.dart';
 export 'home/messages_screen.dart';
 export 'home/profile_screen.dart';
+export 'private_chat_screen.dart';

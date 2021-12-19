@@ -101,6 +101,7 @@ class _CreateProfileScreenState extends State<CreateProfileScreen> {
                 textAlign: TextAlign.center,
                 hintKey: "",
                 controller: nameController,
+                keyboardType: TextInputType.name,
               ),
               SizedBox(height: _size.height(20)),
               TextField(
@@ -112,7 +113,7 @@ class _CreateProfileScreenState extends State<CreateProfileScreen> {
                       OutlineInputBorder(borderSide: BorderSide.none),
                   errorBorder: OutlineInputBorder(borderSide: BorderSide.none),
                 ),
-                keyboardType: TextInputType.name,
+                keyboardType: TextInputType.text,
               ),
               const Spacer(),
               CustomElevatedButton(
