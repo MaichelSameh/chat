@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
 
 import '../models/contact_info.dart';
 import '../models/size.dart';
@@ -27,9 +28,11 @@ class ContactContainer extends StatelessWidget {
         width: double.infinity,
         color: Colors.transparent,
         child: Row(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             CircleAvatar(
               backgroundColor: const Color.fromRGBO(200, 200, 200, 1),
+              foregroundImage: NetworkImage(contact.profilePicture ?? ""),
               child: Text(
                 contact.name.substring(0, 2).toUpperCase(),
                 style: Theme.of(context).textTheme.headline2,
@@ -43,7 +46,7 @@ class ContactContainer extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 SizedBox(
-                  width: _size.width(280),
+                  width: _size.width(20),
                   child: Text(
                     contact.name,
                     style: Theme.of(context).textTheme.bodyText1,
@@ -51,15 +54,30 @@ class ContactContainer extends StatelessWidget {
                     softWrap: true,
                   ),
                 ),
-                Text(
-                  "Online",
-                  style: Theme.of(context).textTheme.bodyText1!.copyWith(
-                        color: const Color.fromRGBO(52, 199, 89, 1),
-                        fontSize: 13,
-                      ),
+                SizedBox(
+                  width: _size.width(240),
+                  child: Text(
+                    contact.lastMessage ?? contact.bio!,
+                    style: Theme.of(context).textTheme.bodyText1!.copyWith(
+                          color: const Color.fromRGBO(159, 159, 159, 1),
+                          fontSize: 13,
+                        ),
+                  ),
                 ),
               ],
-            )
+            ),
+            if (contact.messageDate != null)
+              Text(
+                DateFormat(contact.messageDate!.isBefore(
+                            DateTime.now().subtract(const Duration(days: 1)))
+                        ? "yyyy/MM/dd hh:mm"
+                        : "hh:mm")
+                    .format(contact.messageDate!),
+                style: Theme.of(context).textTheme.bodyText1!.copyWith(
+                      color: const Color.fromRGBO(159, 159, 159, 1),
+                      fontSize: 13,
+                    ),
+              ),
           ],
         ),
       ),

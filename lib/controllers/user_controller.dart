@@ -1,8 +1,10 @@
+import 'dart:convert';
 import 'dart:io';
 
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:get/get.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 import '../models/user_info.dart';
 
@@ -11,9 +13,10 @@ class UserController extends GetxController {
 
   MyUserInfo get currentUser => _currentUser;
 
-  void setCurrentUser(MyUserInfo user) {
+  Future<void> setCurrentUser(MyUserInfo user) async {
     _currentUser = user;
     update();
+    await _saveUser();
   }
 
   Future<void> updateUserPhoto(File photo) async {
@@ -28,12 +31,12 @@ class UserController extends GetxController {
         .set({"profile_url": link}, SetOptions(merge: true));
   }
 
-  void addNewFCM(String fcm) {
+  Future<void> addNewFCM(String fcm) async {
     List<String> list = currentUser.fcm;
     if (!list.contains(fcm)) {
       list.add(fcm);
     }
-    setCurrentUser(
+    await setCurrentUser(
       currentUser.copyWith(fcm: list),
     );
   }
@@ -56,5 +59,18 @@ class UserController extends GetxController {
     return res.docs.isNotEmpty
         ? MyUserInfo.fromFirebase(res.docs.first.data(), res.docs.first.id)
         : null;
+  }
+
+  Future<void> _saveUser() async {
+    SharedPreferences pref = await SharedPreferences.getInstance();
+    Map<String, dynamic> map = currentUser.toMap();
+    map.putIfAbsent("id", () => currentUser.id);
+    await pref.setString("user", json.encode(map));
+  }
+
+  Future<void> getUser() async {
+    SharedPreferences pref = await SharedPreferences.getInstance();
+    Map<String, dynamic> user = json.decode(pref.getString("user")!);
+    await setCurrentUser(MyUserInfo.fromFirebase(user, user["id"]));
   }
 }

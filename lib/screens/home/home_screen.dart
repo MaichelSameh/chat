@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+import 'package:get/get.dart';
 
+import '../../controllers/localization_controller.dart';
 import '../../models/size.dart';
 import '../../widgets/widgets.dart';
 import 'calls_screen.dart';
@@ -47,6 +50,33 @@ class _HomeScreenState extends State<HomeScreen> {
                     color: Color.fromRGBO(220, 220, 220, 1),
                   ),
                 ),
+              ),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Padding(
+                    padding: EdgeInsets.symmetric(horizontal: _size.width(24)),
+                    child: Text(
+                      Get.find<AppLocalizationController>().getTranslatedValue(
+                        currentPageNumber == 0
+                            ? "messages"
+                            : currentPageNumber == 1
+                                ? "contacts"
+                                : currentPageNumber == 2
+                                    ? "calls"
+                                    : "profile",
+                      ),
+                      style: Theme.of(context).textTheme.headline2,
+                    ),
+                  ),
+                  GestureDetector(
+                    child: Padding(
+                      padding:
+                          EdgeInsets.symmetric(horizontal: _size.width(24)),
+                      child: SvgPicture.asset("assets/icons/search_icon.svg"),
+                    ),
+                  ),
+                ],
               ),
             ),
             //the body of the screen

@@ -1,48 +1,36 @@
-import 'services/handle_notifications.dart';
-import 'package:firebase_auth/firebase_auth.dart';
+import 'package:chat_app/services/messages_db_helper.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-import 'package:firebase_core/firebase_core.dart';
+import 'package:get/get.dart';
 
 import 'config/palette.dart';
 import 'controllers/controllers.dart';
 import 'screens/screens.dart';
-import 'services/contact_services.dart';
+import 'services/handle_notifications.dart';
 
 Future<void> handleBackgroundNotification(RemoteMessage message) async {}
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-
-  Get.put<AppLocalizationController>(AppLocalizationController.empty());
+  await Firebase.initializeApp();
   Get.put<AuthController>(AuthController());
   Get.put<UserController>(UserController());
-
-  await Firebase.initializeApp();
+  Get.put<AppLocalizationController>(AppLocalizationController.empty());
   FirebaseMessaging.onBackgroundMessage(handleBackgroundNotification);
   HandleNotification.initialize();
-
-  runApp(const MyApp());
+  bool loggedIn = await Get.find<AuthController>().tryAutoLogin();
+  runApp(MyApp(loggedIn: loggedIn));
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+  final bool loggedIn;
+  const MyApp({Key? key, required this.loggedIn}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    ContactServices().canGetContacts().then((value) {
-      if (value) {
-        ContactServices().getContacts();
-      } else {
-        ContactServices().getContactsPermission().then((value) {
-          if (value) {
-            ContactServices().getContacts();
-          }
-        });
-      }
-    });
+    MessagesDBHelper().resetDB();
     return GetBuilder<AppLocalizationController>(
       builder: (localization) {
         return MaterialApp(
@@ -54,9 +42,8 @@ class MyApp extends StatelessWidget {
             GlobalCupertinoLocalizations.delegate,
           ],
           supportedLocales: localization.locales,
-          initialRoute: FirebaseAuth.instance.currentUser == null
-              ? OnboardingScreen.route_name
-              : HomeScreen.route_name,
+          initialRoute:
+              loggedIn ? HomeScreen.route_name : OnboardingScreen.route_name,
           routes: {
             OnboardingScreen.route_name: (_) =>
                 const OnboardingScreen(key: Key(OnboardingScreen.route_name)),

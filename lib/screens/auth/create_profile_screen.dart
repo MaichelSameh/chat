@@ -24,6 +24,7 @@ class CreateProfileScreen extends StatefulWidget {
 class _CreateProfileScreenState extends State<CreateProfileScreen> {
   final TextEditingController bioController =
       TextEditingController(text: Get.find<UserController>().currentUser.bio);
+
   final TextEditingController nameController = TextEditingController(
       text: Get.find<UserController>().currentUser.name.isEmpty
           ? null

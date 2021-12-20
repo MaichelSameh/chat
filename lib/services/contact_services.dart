@@ -1,8 +1,8 @@
-import '../controllers/controllers.dart';
+import 'package:contacts_service/contacts_service.dart';
 import 'package:get/get.dart';
 import 'package:permission_handler/permission_handler.dart';
-import 'package:contacts_service/contacts_service.dart';
 
+import '../controllers/controllers.dart';
 import '../models/contact_info.dart';
 import 'contacts_db_services.dart';
 
@@ -40,7 +40,10 @@ class ContactServices {
                   Get.find<UserController>().currentUser.countryCode[i], "");
             }
           }
-          phones.add(phoneNumber);
+          if (phoneNumber !=
+              Get.find<UserController>().currentUser.phoneNumber) {
+            phones.add(phoneNumber);
+          }
         }
       }
       if (phones.isNotEmpty) {

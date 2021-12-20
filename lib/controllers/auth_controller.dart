@@ -1,33 +1,26 @@
 import 'dart:convert';
 
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:firebase_messaging/firebase_messaging.dart';
-import 'package:get/get.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/services.dart';
+import 'package:get/get.dart';
 
 import '../models/models.dart';
+import '../services/contact_services.dart';
+import '../services/messages_db_helper.dart';
 import 'user_controller.dart';
 
 class AuthController extends GetxController {
+  String _countryCode = "";
   String _phoneNumber = "";
   int? _resendToken;
-  String _verificationID = "";
   bool _smsReceived = false;
-  String _countryCode = "";
+  String _verificationID = "";
 
   bool get smsReceived => _smsReceived;
 
   String get phoneNumber => _countryCode + _phoneNumber;
-
-  void _echo({
-    required String variableName,
-    required String functionName,
-    required dynamic data,
-  }) {
-    // ignore: avoid_print
-    print("AUTH_SERVICES $functionName $variableName: $data ");
-  }
 
   Future<List<CountryInfo>> getCountries() async {
     try {
@@ -49,17 +42,11 @@ class AuthController extends GetxController {
     }
   }
 
-  Future<bool> verifyPhone(String code) async {
-    // Create a PhoneAuthCredential with the code
-    PhoneAuthCredential credential = PhoneAuthProvider.credential(
-        verificationId: _verificationID, smsCode: code);
-    // Sign the user in (or link) with the credential
-    UserCredential user =
-        await FirebaseAuth.instance.signInWithCredential(credential);
-    Get.find<UserController>().setCurrentUser(
+  Future<void> saveAuthData(User user) async {
+    await Get.find<UserController>().setCurrentUser(
       Get.find<UserController>().currentUser.copyWith(
             phoneNumber: _phoneNumber,
-            id: user.user!.uid,
+            id: user.uid,
             countryCode: _countryCode,
           ),
     );
@@ -70,19 +57,30 @@ class AuthController extends GetxController {
         .get();
 
     if (response.data() != null) {
-      Get.find<UserController>().setCurrentUser(
+      await Get.find<UserController>().setCurrentUser(
           MyUserInfo.fromFirebase(response.data()!, response.id));
     }
 
     String fcm = await FirebaseMessaging.instance.getToken() ?? "Not available";
-    Get.find<UserController>().addNewFCM(fcm);
-    FirebaseFirestore.instance
+    await Get.find<UserController>().addNewFCM(fcm);
+    await FirebaseFirestore.instance
         .collection("users")
         .doc(Get.find<UserController>().currentUser.id)
         .set(
           Get.find<UserController>().currentUser.toMap(),
           SetOptions(merge: true),
         );
+    await _config();
+  }
+
+  Future<bool> verifyPhone(String code) async {
+    // Create a PhoneAuthCredential with the code
+    PhoneAuthCredential credential = PhoneAuthProvider.credential(
+        verificationId: _verificationID, smsCode: code);
+    // Sign the user in (or link) with the credential
+    UserCredential user =
+        await FirebaseAuth.instance.signInWithCredential(credential);
+    await saveAuthData(user.user!);
     return true;
   }
 
@@ -113,6 +111,7 @@ class AuthController extends GetxController {
           update();
         },
         codeAutoRetrievalTimeout: (String verificationId) {},
+        timeout: const Duration(minutes: 2),
       );
     } catch (error) {
       _echo(variableName: "error", functionName: "getCountries", data: error);
@@ -125,7 +124,7 @@ class AuthController extends GetxController {
       final FirebaseAuth auth = FirebaseAuth.instance;
       await auth.verifyPhoneNumber(
         forceResendingToken: _resendToken,
-        phoneNumber: _phoneNumber,
+        phoneNumber: phoneNumber,
         verificationCompleted: (PhoneAuthCredential credential) async {
           await auth.signInWithCredential(credential);
         },
@@ -139,11 +138,75 @@ class AuthController extends GetxController {
           _resendToken = resendToken;
         },
         codeAutoRetrievalTimeout: (String verificationId) {},
+        timeout: const Duration(minutes: 2),
       );
       return true;
     } catch (error) {
       _echo(variableName: "error", functionName: "getCountries", data: error);
       rethrow;
+    }
+  }
+
+  Future<bool> tryAutoLogin() async {
+    if (FirebaseAuth.instance.currentUser == null) {
+      return false;
+    } else {
+      await Get.find<UserController>().getUser();
+      await _config();
+      return true;
+    }
+  }
+
+  void _echo({
+    required String variableName,
+    required String functionName,
+    required dynamic data,
+  }) {
+    // ignore: avoid_print
+    print("AUTH_SERVICES $functionName $variableName: $data ");
+  }
+
+  Future<void> _config() async {
+    await MessagesDBHelper().initialize();
+    await ContactServices().canGetContacts().then((value) {
+      if (value) {
+        ContactServices().getContacts();
+      } else {
+        ContactServices().getContactsPermission().then((value) {
+          if (value) {
+            ContactServices().getContacts();
+          }
+        });
+      }
+    });
+    FirebaseFirestore.instance
+        .collection("messages")
+        .where("receiver_id",
+            isEqualTo: Get.find<UserController>().currentUser.id)
+        .get()
+        .asStream()
+        .listen(
+      (message) async {
+        for (QueryDocumentSnapshot<Map<String, dynamic>> doc in message.docs) {
+          await MessagesDBHelper()
+              .insertIfAbsent(MessageInfo.fromFirebase(doc.data(), doc.id));
+          await FirebaseFirestore.instance
+              .collection("messages")
+              .doc(doc.id)
+              .delete();
+        }
+      },
+    );
+  }
+
+  Future<bool> signOut() async {
+    try {
+      await FirebaseAuth.instance.signOut();
+      await MessagesDBHelper().resetDB();
+      return true;
+    } catch (error) {
+      _echo(variableName: "error", functionName: "signOut", data: error);
+      return false;
     }
   }
 }

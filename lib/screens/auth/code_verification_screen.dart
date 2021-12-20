@@ -1,9 +1,9 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import '../../config/palette.dart';
-import '../../controllers/auth_controller.dart';
-import '../../controllers/localization_controller.dart';
+import '../../controllers/controllers.dart';
 import '../../models/size.dart';
 import 'create_profile_screen.dart';
 
@@ -19,6 +19,20 @@ class CodeVerificationScreen extends StatefulWidget {
 
 class _CodeVerificationScreenState extends State<CodeVerificationScreen> {
   final TextEditingController codeController = TextEditingController();
+
+  @override
+  void didChangeDependencies() {
+    FirebaseAuth.instance.authStateChanges().listen(
+      (user) async {
+        if (user != null) {
+          await Get.find<AuthController>().saveAuthData(user);
+          Navigator.of(context)
+              .pushReplacementNamed(CreateProfileScreen.route_name);
+        }
+      },
+    );
+    super.didChangeDependencies();
+  }
 
   @override
   void dispose() {
