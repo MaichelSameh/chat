@@ -36,7 +36,7 @@ class BottomNavBar extends StatelessWidget {
 
   Widget buildNavBarRow(BuildContext context, Size _size) {
     List<Widget> navItems = [];
-    for (int i = 0; i < 4; i++) {
+    for (int i = 0; i < 2; i++) {
       navItems.add(buildNavBarItem(context, _size, i));
     }
     return Row(

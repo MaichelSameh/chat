@@ -44,7 +44,8 @@ class MessageServices {
       String messageId = "";
       DocumentReference<Map<String, dynamic>> ref =
           await _instance.collection("messages").add(message.toMap());
-      await ref.get();
+      DocumentSnapshot<Map<String, dynamic>> res = await ref.get();
+      messageId = res.id;
       String url = "";
       TaskSnapshot linkRef = await FirebaseStorage.instance
           .ref(
@@ -62,7 +63,8 @@ class MessageServices {
       );
       return true;
     } catch (error) {
-      _echo(variableName: "error", functionName: "sendMessage", data: error);
+      _echo(
+          variableName: "error", functionName: "sendFileMessage", data: error);
       return false;
     }
   }
@@ -72,7 +74,8 @@ class MessageServices {
       String messageId = "";
       DocumentReference<Map<String, dynamic>> ref =
           await _instance.collection("messages").add(message.toMap());
-      await ref.get();
+      DocumentSnapshot<Map<String, dynamic>> res = await ref.get();
+      messageId = res.id;
       String url = "";
       TaskSnapshot linkRef = await FirebaseStorage.instance
           .ref(
@@ -90,7 +93,8 @@ class MessageServices {
       );
       return true;
     } catch (error) {
-      _echo(variableName: "error", functionName: "sendMessage", data: error);
+      _echo(
+          variableName: "error", functionName: "sendImageMessage", data: error);
       return false;
     }
   }

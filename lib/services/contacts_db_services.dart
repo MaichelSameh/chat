@@ -200,8 +200,7 @@ class ContactsDBServices {
           contact["phone"] = contact["phone"].first;
           contacts.add(ContactInfo.fromLocalDB(
             contact,
-            message.createdAt,
-            message.message,
+            message,
           ));
         }
       }
@@ -211,8 +210,8 @@ class ContactsDBServices {
           functionName: "getTextedContacts",
           data: error);
     }
-    contacts.sort(
-        (first, second) => second.messageDate!.compareTo(first.messageDate!));
+    contacts.sort((first, second) =>
+        second.lastMessage!.createdAt.compareTo(first.lastMessage!.createdAt));
     return contacts;
   }
 }

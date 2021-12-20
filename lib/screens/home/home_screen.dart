@@ -23,8 +23,8 @@ class _HomeScreenState extends State<HomeScreen> {
   final List<Widget> pages = [
     const MessagesScreen(),
     const ContactsScreen(),
-    const CallsScreen(),
-    const ProfileScreen(),
+    // const CallsScreen(),
+    // const ProfileScreen(),
   ];
 
   int currentPageNumber = 0;
