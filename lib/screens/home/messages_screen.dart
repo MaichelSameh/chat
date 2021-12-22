@@ -33,7 +33,8 @@ class _MessagesScreenState extends State<MessagesScreen> {
           contacts = temp;
         });
       }
-      if (contacts[i].messageDate != temp[i].messageDate ||
+      if (contacts[i].lastMessage!.createdAt ==
+              temp[i].lastMessage!.createdAt ||
           contacts[i].firebaseId != temp[i].firebaseId) {
         setState(() {
           contacts = temp;

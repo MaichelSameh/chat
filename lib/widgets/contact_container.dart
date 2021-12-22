@@ -1,3 +1,4 @@
+import 'package:chat_app/models/message_info.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
@@ -46,7 +47,7 @@ class ContactContainer extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 SizedBox(
-                  width: _size.width(20),
+                  width: _size.width(240),
                   child: Text(
                     contact.name,
                     style: Theme.of(context).textTheme.bodyText1,
@@ -57,22 +58,31 @@ class ContactContainer extends StatelessWidget {
                 SizedBox(
                   width: _size.width(240),
                   child: Text(
-                    contact.lastMessage ?? contact.bio!,
+                    contact.lastMessage != null
+                        ? contact.lastMessage!.type == MediaType.none
+                            ? contact.lastMessage!.message
+                            : contact.lastMessage!.fileName.replaceRange(
+                                contact.lastMessage!.fileName.lastIndexOf("."),
+                                contact.lastMessage!.fileName.length,
+                                "")
+                        : contact.bio!,
                     style: Theme.of(context).textTheme.bodyText1!.copyWith(
                           color: const Color.fromRGBO(159, 159, 159, 1),
                           fontSize: 13,
                         ),
+                    overflow: TextOverflow.ellipsis,
+                    softWrap: true,
                   ),
                 ),
               ],
             ),
-            if (contact.messageDate != null)
+            if (contact.lastMessage != null)
               Text(
-                DateFormat(contact.messageDate!.isBefore(
+                DateFormat(contact.lastMessage!.createdAt.isBefore(
                             DateTime.now().subtract(const Duration(days: 1)))
                         ? "yyyy/MM/dd hh:mm"
                         : "hh:mm")
-                    .format(contact.messageDate!),
+                    .format(contact.lastMessage!.createdAt),
                 style: Theme.of(context).textTheme.bodyText1!.copyWith(
                       color: const Color.fromRGBO(159, 159, 159, 1),
                       fontSize: 13,

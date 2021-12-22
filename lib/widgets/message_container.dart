@@ -73,25 +73,37 @@ class MessageContainer extends StatelessWidget {
                             .copyWith(fontSize: 15),
                       )
                     : message.type == MediaType.file
-                        ? Container(
-                            padding: EdgeInsets.all(_size.width(10)),
-                            decoration: BoxDecoration(
-                              color: const Color.fromRGBO(225, 225, 225, 1),
-                              borderRadius:
-                                  BorderRadius.circular(_size.width(10)),
-                            ),
-                            child: Text(
-                              message.fileName,
-                              style: Theme.of(context)
-                                  .textTheme
-                                  .bodyText1!
-                                  .copyWith(
-                                    fontSize: 15,
-                                  ),
+                        ? GestureDetector(
+                            child: Container(
+                              padding: EdgeInsets.all(_size.width(10)),
+                              decoration: BoxDecoration(
+                                color: const Color.fromRGBO(225, 225, 225, 1),
+                                borderRadius:
+                                    BorderRadius.circular(_size.width(10)),
+                              ),
+                              child: Text(
+                                message.fileName,
+                                style: Theme.of(context)
+                                    .textTheme
+                                    .bodyText1!
+                                    .copyWith(
+                                      fontSize: 15,
+                                    ),
+                              ),
                             ),
                           )
                         : message.type == MediaType.photo
-                            ? Image.network(message.mediaLink)
+                            ? GestureDetector(
+                                onTap: () {
+                                  showDialog(
+                                    context: context,
+                                    builder: (_) => InteractiveViewer(
+                                      child: Image.network(message.mediaLink),
+                                    ),
+                                  );
+                                },
+                                child: Image.network(message.mediaLink),
+                              )
                             : const SizedBox(),
               ),
               SizedBox(height: _size.height(5)),

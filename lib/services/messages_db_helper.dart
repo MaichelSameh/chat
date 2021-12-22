@@ -95,8 +95,7 @@ class MessagesDBHelper {
       Database db = await initialize();
       List<Map<String, dynamic>> list = await db.query(
         DBConfig.messages_table_name,
-        where: '''
-            (
+        where: '''(
               (
                 receiver_id = '$receiverId' AND sender_id = '${Get.find<UserController>().currentUser.id}'
               ) OR (
@@ -110,7 +109,7 @@ class MessagesDBHelper {
         messages.add(MessageInfo.fromLocalDB(message));
       }
     } catch (error) {
-      _echo(variableName: "error", functionName: "insertMessage", data: error);
+      _echo(variableName: "error", functionName: "getMessages", data: error);
     }
     return messages;
   }

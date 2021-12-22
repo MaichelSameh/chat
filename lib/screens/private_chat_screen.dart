@@ -76,31 +76,15 @@ class _PrivateChatScreenState extends State<PrivateChatScreen> {
             ),
           ),
           SizedBox(width: _size.width(14)),
-          Column(
-            children: [
-              SizedBox(
-                width: _size.width(208),
-                child: Text(
-                  contact.name,
-                  style: Theme.of(context).textTheme.bodyText1,
-                  overflow: TextOverflow.ellipsis,
-                  softWrap: true,
-                  maxLines: 1,
-                ),
-              ),
-              SizedBox(
-                width: _size.width(208),
-                child: Text(
-                  "online",
-                  style: Theme.of(context).textTheme.bodyText1!.copyWith(
-                        color: const Color.fromRGBO(52, 199, 89, 1),
-                        fontSize: 14,
-                      ),
-                  overflow: TextOverflow.ellipsis,
-                  softWrap: true,
-                ),
-              ),
-            ],
+          SizedBox(
+            width: _size.width(208),
+            child: Text(
+              contact.name,
+              style: Theme.of(context).textTheme.bodyText1,
+              overflow: TextOverflow.ellipsis,
+              softWrap: true,
+              maxLines: 1,
+            ),
           ),
           SizedBox(width: _size.width(24)),
           Padding(
