@@ -8,7 +8,7 @@ import 'package:get/get.dart';
 import 'config/palette.dart';
 import 'controllers/controllers.dart';
 import 'screens/screens.dart';
-import 'services/handle_notifications.dart';
+// import 'services/handle_notifications.dart';
 
 Future<void> handleBackgroundNotification(RemoteMessage message) async {}
 
@@ -19,7 +19,7 @@ void main() async {
   Get.put<UserController>(UserController());
   Get.put<AppLocalizationController>(AppLocalizationController.empty());
   FirebaseMessaging.onBackgroundMessage(handleBackgroundNotification);
-  HandleNotification.initialize();
+  // HandleNotification.initialize();
   bool loggedIn = await Get.find<AuthController>().tryAutoLogin();
   runApp(MyApp(loggedIn: loggedIn));
 }
