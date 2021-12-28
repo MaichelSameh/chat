@@ -5,10 +5,10 @@ import 'package:get/get.dart';
 import '../../controllers/localization_controller.dart';
 import '../../models/size.dart';
 import '../../widgets/widgets.dart';
-import 'calls_screen.dart';
+// import 'calls_screen.dart';
 import 'contacts_screen.dart';
 import 'messages_screen.dart';
-import 'profile_screen.dart';
+// import 'profile_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   // ignore: constant_identifier_names

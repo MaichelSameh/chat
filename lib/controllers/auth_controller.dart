@@ -5,6 +5,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
+import 'package:platform_device_id/platform_device_id.dart';
 
 import '../models/models.dart';
 import '../services/contact_services.dart';
@@ -62,7 +63,13 @@ class AuthController extends GetxController {
     }
 
     String fcm = await FirebaseMessaging.instance.getToken() ?? "Not available";
-    await Get.find<UserController>().addNewFCM(fcm);
+    String deviceId = await PlatformDeviceId.getDeviceId ?? "";
+    await FcmInfo(
+      createdAt: DateTime.now(),
+      deviceId: deviceId,
+      fcm: fcm,
+      userId: Get.find<UserController>().currentUser.id,
+    ).upload();
     await FirebaseFirestore.instance
         .collection("users")
         .doc(Get.find<UserController>().currentUser.id)

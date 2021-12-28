@@ -31,16 +31,6 @@ class UserController extends GetxController {
         .set({"profile_url": link}, SetOptions(merge: true));
   }
 
-  Future<void> addNewFCM(String fcm) async {
-    List<String> list = currentUser.fcm;
-    if (!list.contains(fcm)) {
-      list.add(fcm);
-    }
-    await setCurrentUser(
-      currentUser.copyWith(fcm: list),
-    );
-  }
-
   Future<void> updateMyInfo(String name, String bio) async {
     setCurrentUser(
       currentUser.copyWith(bio: bio, name: name),
