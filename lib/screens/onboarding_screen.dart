@@ -28,7 +28,10 @@ class OnboardingScreen extends StatelessWidget {
               style: Theme.of(context).textTheme.headline1,
             ),
             SizedBox(height: _size.height(127)),
-            SvgPicture.asset("assets/icons/welcome_icon.svg"),
+            SvgPicture.asset(
+              "assets/icons/welcome_icon.svg",
+              height: _size.height(250),
+            ),
             SizedBox(height: _size.height(40)),
             Text(
               Get.find<AppLocalizationController>()

@@ -63,7 +63,7 @@ class _PhoneVerificationScreenState extends State<PhoneVerificationScreen> {
                   ),
                   SizedBox(width: _size.width(10)),
                   SizedBox(
-                    width: _size.width(150),
+                    width: _size.width(140),
                     child: Text(
                       country.name,
                       style: Theme.of(context).textTheme.bodyText1!.copyWith(),

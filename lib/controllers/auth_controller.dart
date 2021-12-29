@@ -93,6 +93,7 @@ class AuthController extends GetxController {
 
   Future<void> phoneAuth(String phoneCode, String phoneNumber) async {
     _countryCode = phoneCode;
+
     for (int i = 0; i < phoneCode.length; i++) {
       if (phoneNumber.startsWith(phoneCode[i])) {
         phoneNumber = phoneNumber.replaceFirst(phoneCode[i], "");
@@ -101,6 +102,7 @@ class AuthController extends GetxController {
     _phoneNumber = phoneNumber;
     try {
       final FirebaseAuth auth = FirebaseAuth.instance;
+      print("starting the phone auth");
       await auth.verifyPhoneNumber(
         phoneNumber: _countryCode + _phoneNumber,
         verificationCompleted: (PhoneAuthCredential credential) async {
@@ -115,6 +117,7 @@ class AuthController extends GetxController {
           _verificationID = verificationId;
           _resendToken = resendToken;
           _smsReceived = true;
+          print("sms sent");
           update();
         },
         codeAutoRetrievalTimeout: (String verificationId) {},
